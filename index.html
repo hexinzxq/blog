@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>何鑫 · 前端工程师</title>
+<meta name="description" content="何鑫，前端工程师。这里记录我最近在改什么、为什么改，以及几个值得点开的项目。">
+<meta property="og:title" content="何鑫 · 前端工程师">
+<meta property="og:description" content="最近在改什么、为什么改，以及几个值得点开的项目。">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23101418'/><path d='M9 21V11h2v4h4v-4h2v10h-2v-4h-4v4z' fill='%23FFB020'/></svg>">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <div class="who">
+      <h1>何鑫</h1>
+      <p class="role">前端工程师 · 成都</p>
+    </div>
+    <nav class="links" aria-label="站外链接">
+      <a href="https://github.com/hexinzxq" rel="me noopener">GitHub</a>
+      <a href="https://github.com/hexinzxq/blog" rel="noopener">这个站</a>
+      <a href="#projects">项目</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="lede wrap">
+    <p class="statement">
+      我做前端，也写一些让 agent 少犯错的工具。
+      这个站每天 20:00 自己重建一次——它读我的仓库，把我最近真改了什么贴出来，不写「热爱技术」那种句子。
+    </p>
+    <dl class="counters" id="counters" aria-live="polite">
+      <div><dt>近 14 天提交</dt><dd class="num" data-counter="commits">—</dd></div>
+      <div><dt>有改动的仓库</dt><dd class="num" data-counter="repos">—</dd></div>
+      <div><dt>上次重建</dt><dd class="num" data-counter="built">—</dd></div>
+    </dl>
+  </section>
+
+  <section id="projects" class="wrap projects" aria-labelledby="projects-h">
+    <h2 id="projects-h">值得点开的三个</h2>
+    <ol class="project-list" id="project-list">
+      <!-- 由 app.js 用 data/site.json 渲染 -->
+    </ol>
+  </section>
+
+  <section class="log" aria-labelledby="log-h">
+    <div class="wrap">
+      <div class="log-head">
+        <h2 id="log-h">构建日志</h2>
+        <p class="log-sub" id="log-sub">最近 14 天，我按下过的 commit</p>
+      </div>
+      <ol class="timeline" id="timeline">
+        <li class="empty">正在读仓库…</li>
+      </ol>
+      <noscript>
+        <p class="empty">这段内容由脚本每天生成，需要开 JavaScript 才看得到。直接看 <a href="https://github.com/hexinzxq">GitHub</a> 也一样。</p>
+      </noscript>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <p>内容每天 20:00（北京时间）自动从 GitHub 拉取生成，数据源在 <a href="https://github.com/hexinzxq/blog/blob/main/scripts/collect.py">scripts/collect.py</a>。</p>
+    <p class="tiny">页面按 <a href="https://github.com/hexinzxq/skillforge/blob/main/skills/frontend-design/SKILL.md">frontend-design</a> 的规矩做：先定设计计划，再写码。</p>
+  </div>
+</footer>
+
+<script src="assets/app.js" defer></script>
+</body>
+</html>

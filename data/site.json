@@ -1,0 +1,27 @@
+{
+  "owner": "hexinzxq",
+  "updated_note": "手写，改项目时改这里；构建日志是脚本自动生成的",
+  "projects": [
+    {
+      "name": "skillforge",
+      "url": "https://github.com/hexinzxq/skillforge",
+      "why": "给 coding agent 用的技能库，专治「看起来答得像样、实际落不了地」。每条 skill 都要求给出数值、可跑的命令、以及这条规则防的是什么错误；CI 用 stdlib 校验规范，路径指错就红。",
+      "stack": ["Agent Skills", "Python", "GitHub Actions"],
+      "note": "62 个 skill · 1 个自己写，61 个收录并保留原许可"
+    },
+    {
+      "name": "dsh-agentledger",
+      "url": "https://github.com/hexinzxq/dsh-agentledger",
+      "why": "本地优先的会话记忆：确定性抽取 + 混合检索，不依赖云端。目标是一周一周地把「agent 记得住上一轮在干什么」这件事做扎实，而不是塞个向量库就完事。",
+      "stack": ["TypeScript", "SQLite", "Hybrid Search"],
+      "note": "一周一版，公开迭代"
+    },
+    {
+      "name": "open-chat",
+      "url": "https://github.com/hexinzxq/open-chat",
+      "why": "面向生产的开源 AI 聊天助手骨架：Next.js 16 + React 19 前端，FastAPI + PostgreSQL + Redis 后端。先打通链路和部署，再往里填功能。",
+      "stack": ["Next.js", "React 19", "FastAPI", "PostgreSQL"],
+      "note": "monorepo · 阶段一骨架已成型"
+    }
+  ]
+}

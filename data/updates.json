@@ -1,0 +1,151 @@
+{
+  "generated_at": "2026-10-31T02:03:46Z",
+  "window_days": 14,
+  "owner": "hexinzxq",
+  "totals": {
+    "commits": 20,
+    "repos": 2
+  },
+  "entries": [
+    {
+      "repo": "dsh-agentledger",
+      "message": "chore(state): record three iterations on 2026-10-31",
+      "short": "9adf0fa",
+      "date": "2026-10-31T00:04:08Z",
+      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/9adf0fae064578968ee9950ebe7ecf16a2c39783"
+    },
+    {
+      "repo": "skillforge",
+      "message": "feat(validate): compile shipped scripts, because a broken script fails at runtime",
+      "short": "441773b",
+      "date": "2026-10-31T00:04:03Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/441773bf912d85e3e5be9d15914225a93c1bcb63"
+    },
+    {
+      "repo": "skillforge",
+      "message": "feat(frontend-design): check contrast with a script instead of by hand",
+      "short": "52d15e2",
+      "date": "2026-10-31T00:03:07Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/52d15e27d18d35dddf361eb6b7b4a9e06ca89730"
+    },
+    {
+      "repo": "skillforge",
+      "message": "fix(ci): validate vendored skills and drop steps pointing at deleted files",
+      "short": "8d0016c",
+      "date": "2026-10-31T00:02:23Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/8d0016cb0cf6b2e3a4b833e0eb52970b1d5e256a"
+    },
+    {
+      "repo": "skillforge",
+      "message": "docs(readme): add a one-line catalog of every skill in the repo",
+      "short": "84b88ec",
+      "date": "2026-10-30T17:32:59Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/84b88ec2a667a85461eed486e83622d75cbd940d"
+    },
+    {
+      "repo": "skillforge",
+      "message": "feat(vendor): add 20 curated skills from agent-skills-standard",
+      "short": "f33cd59",
+      "date": "2026-10-30T17:30:50Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/f33cd59f4769d1d0ad4f95f2bd4764bb45759807"
+    },
+    {
+      "repo": "skillforge",
+      "message": "feat(skills): swap starter set for frontend-design, vendor three skill libraries",
+      "short": "a72566a",
+      "date": "2026-10-30T17:27:14Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/a72566a09e1a66f459d502a2f7a9f5b041314ec0"
+    },
+    {
+      "repo": "dsh-agentledger",
+      "message": "chore: switch the daily target to skillforge",
+      "short": "5e05fa0",
+      "date": "2026-10-30T14:48:35Z",
+      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/5e05fa0f9decd348d68f94a6a9a60c9985daf0d9"
+    },
+    {
+      "repo": "skillforge",
+      "message": "feat(install): installer, CI, and the daily routine",
+      "short": "62b046f",
+      "date": "2026-10-30T14:47:35Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/62b046f2c2537a091dd56c2b043a28083604c374"
+    },
+    {
+      "repo": "skillforge",
+      "message": "feat(tools): spec validator with 19 tests",
+      "short": "8cbc7b8",
+      "date": "2026-10-30T14:47:35Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/8cbc7b8a8bd71f879f527af81e7e8c5d00f1edd0"
+    },
+    {
+      "repo": "skillforge",
+      "message": "feat(skills): commit-craft, debug-probe, test-gap",
+      "short": "4ec8179",
+      "date": "2026-10-30T14:47:35Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/4ec8179e266f872ddaea0fd4a95eadf905249a9a"
+    },
+    {
+      "repo": "skillforge",
+      "message": "feat(skills): ui-critique and design-tokens",
+      "short": "a0e0b64",
+      "date": "2026-10-30T14:47:35Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/a0e0b64222f49ba23ba3ad3a9d11dcb0c7f43c86"
+    },
+    {
+      "repo": "dsh-agentledger",
+      "message": "chore(research): 2026-10-30 snapshot #2 (41 entries) for the next pick",
+      "short": "747149b",
+      "date": "2026-10-30T14:38:17Z",
+      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/747149b5645a955c413697d32b1e0ad2425aa8ab"
+    },
+    {
+      "repo": "dsh-agentledger",
+      "message": "docs: one routine file the daily windows can point at",
+      "short": "153afd7",
+      "date": "2026-10-30T14:30:11Z",
+      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/153afd7685070da4351a0e1988a32d94910f1531"
+    },
+    {
+      "repo": "dsh-agentledger",
+      "message": "chore: record week 1 pick and make the iteration log greppable",
+      "short": "29e4b2f",
+      "date": "2026-10-30T14:29:35Z",
+      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/29e4b2fa10b340db599d9a8904b5f5a6a9ce19c7"
+    },
+    {
+      "repo": "dsh-agentledger",
+      "message": "feat(cli): amem command line, stdlib only",
+      "short": "93c798f",
+      "date": "2026-10-30T14:29:06Z",
+      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/93c798f889987b767ba7b44001b0845ee5f3297b"
+    },
+    {
+      "repo": "dsh-agentledger",
+      "message": "feat(server): FastAPI API + zero-build web viewer",
+      "short": "6fd0147",
+      "date": "2026-10-30T14:27:22Z",
+      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/6fd0147311fdab4fa2f746f737f0b18a8395fef8"
+    },
+    {
+      "repo": "dsh-agentledger",
+      "message": "feat(mcp): dependency-free MCP stdio server with 3-layer tools",
+      "short": "9d34576",
+      "date": "2026-10-30T14:25:46Z",
+      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/9d34576f6b5a22c1b009cfe0ebf4fe0fa9b159bf"
+    },
+    {
+      "repo": "dsh-agentledger",
+      "message": "feat: deterministic extraction + local TF-IDF embeddings",
+      "short": "9b1d3b9",
+      "date": "2026-10-30T14:24:27Z",
+      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/9b1d3b9bfa5e4ef091e2f09a3f1f4fc5751ca30b"
+    },
+    {
+      "repo": "dsh-agentledger",
+      "message": "chore: scaffold project, weekly research pipeline, and storage layer",
+      "short": "6d709a3",
+      "date": "2026-10-30T14:22:41Z",
+      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/6d709a3180caebe31e509ab15e18043d6b730b95"
+    }
+  ]
+}

@@ -1,0 +1,431 @@
+/* ============================================================
+   Design plan (fixed before code, per frontend-design skill)
+
+   PALETTE  bg #101418 / surface #171E24 / text #EAF0F4
+            muted #93A1AB / accent #FFB020 / accent-contrast #101418
+   TYPE     system sans for prose, ui-monospace for every number,
+            date and commit hash; scale 1.25 (13/16/20/25/31/49)
+   GRID     max 1080px, 12 col, gutter 24, breakpoint 760/1080, 8px base
+   RHYTHM   24 / 48 / 96 / 120
+   MOTION   one orchestrated moment: log rows stagger in from the left,
+           60ms apart; disabled under prefers-reduced-motion
+   HERO     a vertical build-log spine running the whole page
+   RISK     no card grid for the log — a literal timeline on the left
+            margin, dates and hashes set in mono, so the page reads like
+            a build output rather than a portfolio
+   ============================================================ */
+
+:root {
+  --bg: #101418;
+  --surface: #171e24;
+  --surface-2: #1d262d;
+  --text: #eaf0f4;
+  --muted: #93a1ab;
+  --accent: #ffb020;
+  --accent-contrast: #101418;
+  --border: #26313a;
+
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+
+  --wrap: 1080px;
+  --gutter: 24px;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+p { margin: 0; }
+
+a {
+  color: var(--text);
+  text-decoration-color: color-mix(in srgb, var(--accent) 55%, transparent);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color .15s ease, text-decoration-color .15s ease;
+}
+
+a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--wrap);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  padding: 10px 16px;
+  font-weight: 600;
+  z-index: 10;
+}
+.skip:focus { left: 16px; top: 16px; }
+
+/* ---------- masthead ---------- */
+
+.masthead {
+  border-bottom: 1px solid var(--border);
+}
+
+.masthead-inner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  padding-block: 40px 24px;
+}
+
+.who h1 {
+  font-size: 25px;
+  letter-spacing: -0.01em;
+}
+
+.role {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+  font-size: 13px;
+}
+
+.links a {
+  color: var(--muted);
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+}
+
+.links a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* ---------- lede ---------- */
+
+.lede {
+  padding-block: 96px 72px;
+}
+
+.statement {
+  max-width: 62ch;
+  font-size: 25px;
+  line-height: 1.45;
+  letter-spacing: -0.015em;
+  color: var(--text);
+}
+
+.counters {
+  display: flex;
+  gap: 48px;
+  margin: 48px 0 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.counters dt {
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+}
+
+.counters dd {
+  margin: 6px 0 0;
+  font-family: var(--font-mono);
+  font-size: 31px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.03em;
+}
+
+.counters dd.is-text { font-size: 20px; letter-spacing: 0; }
+
+/* ---------- projects ---------- */
+
+.projects { padding-bottom: 96px; }
+
+.projects h2,
+.log-head h2 {
+  font-size: 20px;
+  margin-bottom: 24px;
+}
+
+.project-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 8px 24px;
+  padding: 24px;
+  background: var(--surface);
+  border-left: 2px solid transparent;
+  border-radius: 4px;
+  transition: border-left-color .2s ease, background .2s ease;
+}
+
+.project:hover {
+  background: var(--surface-2);
+  border-left-color: var(--accent);
+}
+
+.project-index {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--muted);
+  padding-top: 4px;
+}
+
+.project h3 {
+  font-size: 20px;
+}
+
+.project h3 a { text-decoration: none; }
+.project h3 a:hover { color: var(--accent); }
+
+.project-why {
+  margin-top: 8px;
+  color: var(--muted);
+  max-width: 60ch;
+}
+
+.project-meta {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  margin-top: 16px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.tag {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 2px 10px;
+}
+
+/* ---------- build log / timeline ---------- */
+
+.log {
+  padding-block: 96px 120px;
+  background:
+    linear-gradient(var(--border) 1px, transparent 1px) top left / 100% 100% no-repeat;
+  border-top: 1px solid var(--border);
+}
+
+.log-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.log-sub {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.timeline {
+  list-style: none;
+  margin: 48px 0 0;
+  padding: 0 0 0 88px;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 71px;
+  top: 6px;
+  bottom: 6px;
+  width: 1px;
+  background: var(--border);
+}
+
+.entry {
+  position: relative;
+  padding: 0 0 32px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+}
+
+.entry::before {
+  content: "";
+  position: absolute;
+  left: -21px;
+  top: 9px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 1px solid var(--muted);
+}
+
+.entry.is-fresh::before {
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+.entry-when {
+  position: absolute;
+  left: -88px;
+  top: 2px;
+  width: 60px;
+  text-align: right;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.entry-msg {
+  font-size: 16px;
+  overflow-wrap: anywhere;
+}
+
+.entry-msg a { text-decoration: none; }
+.entry-msg a:hover { color: var(--accent); text-decoration: underline; }
+
+.entry-ctx {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.entry-ctx .repo { color: var(--text); }
+
+.entry-sha {
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+}
+
+.entry-sha:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+.empty {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+/* entry stagger, the one orchestrated moment */
+@media (prefers-reduced-motion: no-preference) {
+  .entry {
+    opacity: 0;
+    transform: translateX(-8px);
+    animation: enter .38s cubic-bezier(.2, .7, .3, 1) forwards;
+    animation-delay: calc(var(--i, 0) * 60ms);
+  }
+
+  @keyframes enter {
+    to { opacity: 1; transform: none; }
+  }
+}
+
+/* ---------- footer ---------- */
+
+.footer {
+  border-top: 1px solid var(--border);
+  padding-block: 40px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.footer-inner p { max-width: 52ch; }
+.tiny { font-size: 12px; }
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 760px) {
+  .masthead-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .lede { padding-block: 64px 48px; }
+  .statement { font-size: 20px; }
+
+  .counters {
+    gap: 28px;
+    flex-wrap: wrap;
+  }
+
+  .counters dd { font-size: 25px; }
+
+  .project {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .project-index { padding-top: 0; }
+  .project-meta { grid-column: 1; }
+
+  .log { padding-block: 64px 80px; }
+
+  .timeline {
+    padding-left: 56px;
+  }
+
+  .timeline::before { left: 39px; }
+
+  .entry-when {
+    left: -56px;
+    width: 40px;
+    font-size: 11px;
+  }
+
+  .entry::before { left: -21px; }
+}
