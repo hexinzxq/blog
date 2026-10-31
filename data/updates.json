@@ -1,12 +1,96 @@
 {
-  "generated_at": "2026-10-31T02:04:46Z",
+  "generated_at": "2026-10-31T16:23:16Z",
   "window_days": 14,
   "owner": "hexinzxq",
   "totals": {
-    "commits": 20,
-    "repos": 2
+    "commits": 32,
+    "repos": 3
   },
   "entries": [
+    {
+      "repo": "dsh-agentledger",
+      "message": "research: 2026-10-31 archive-only snapshot (gate: week_of is 1 day old)",
+      "short": "5dbcab4",
+      "date": "2026-10-31T12:02:35Z",
+      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/5dbcab4d46455c010440adb8e0e92e73654c5d6d"
+    },
+    {
+      "repo": "dsh-agentledger",
+      "message": "log: 2026-10-31 evening maintenance skillforge",
+      "short": "379eb22",
+      "date": "2026-10-31T10:32:28Z",
+      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/379eb2242adf7e2689d0122dc184b83899719b3b"
+    },
+    {
+      "repo": "skillforge",
+      "message": "docs(frontend-design): move contrast mechanics into references/",
+      "short": "8bec262",
+      "date": "2026-10-31T10:31:29Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/8bec2628c338b3556e08eae56a03787eae2781b3"
+    },
+    {
+      "repo": "dsh-agentledger",
+      "message": "log: 2026-10-31 #5 skillforge dual-scope + -foreground",
+      "short": "dd257a5",
+      "date": "2026-10-31T05:39:58Z",
+      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/dd257a566306ebc13508fc170d70ba1faf492201"
+    },
+    {
+      "repo": "skillforge",
+      "message": "feat(frontend-design): scope-aware token reading and the shadcn -foreground convention",
+      "short": "718d7ab",
+      "date": "2026-10-31T05:39:33Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/718d7ab9b380c32a3c7e935f8791698d09f27952"
+    },
+    {
+      "repo": "dsh-agentledger",
+      "message": "log: skillforge iteration 4 (oklch parsing)",
+      "short": "f482ff6",
+      "date": "2026-10-31T04:38:06Z",
+      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/f482ff68859138050567039449096d5d4ce29714"
+    },
+    {
+      "repo": "skillforge",
+      "message": "feat(frontend-design): parse oklch/rgb/hsl token sheets, because modern palettes are not hex",
+      "short": "4f4b917",
+      "date": "2026-10-31T04:37:58Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/4f4b9177eabd77df856d3f5ce308a34ee0e411a4"
+    },
+    {
+      "repo": "open-chat",
+      "message": "feat(web): switch models from the composer, with saved profiles",
+      "short": "6fe0031",
+      "date": "2026-10-31T02:35:40Z",
+      "url": "https://github.com/hexinzxq/open-chat/commit/6fe0031fc081097d41f94fb56efe3129952356c2"
+    },
+    {
+      "repo": "open-chat",
+      "message": "feat(web): rebuild the shell, not just the chat box",
+      "short": "f9c7032",
+      "date": "2026-10-31T02:30:34Z",
+      "url": "https://github.com/hexinzxq/open-chat/commit/f9c703239bd5b40eef4b55abe08cade547f22fd2"
+    },
+    {
+      "repo": "open-chat",
+      "message": "chore: run prettier over the rewritten web app",
+      "short": "4757b1d",
+      "date": "2026-10-31T02:18:44Z",
+      "url": "https://github.com/hexinzxq/open-chat/commit/4757b1dda67bd99692951e50ca9cefa9cfcc1cb3"
+    },
+    {
+      "repo": "open-chat",
+      "message": "style(web): give the user bubble a tint so it reads against the dark surface",
+      "short": "0e7356f",
+      "date": "2026-10-31T02:17:41Z",
+      "url": "https://github.com/hexinzxq/open-chat/commit/0e7356fd0d89fe8c22373118ae6427b730092566"
+    },
+    {
+      "repo": "open-chat",
+      "message": "feat(web): rebuild as a working chat UI with a static fallback",
+      "short": "4872126",
+      "date": "2026-10-31T02:13:56Z",
+      "url": "https://github.com/hexinzxq/open-chat/commit/48721263fb1188b051bb7278622c8b8dd339d124"
+    },
     {
       "repo": "dsh-agentledger",
       "message": "chore(state): record three iterations on 2026-10-31",
