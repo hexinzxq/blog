@@ -1,12 +1,40 @@
 {
-  "generated_at": "2026-10-31T16:23:16Z",
+  "generated_at": "2026-11-01T17:17:46Z",
   "window_days": 14,
   "owner": "hexinzxq",
   "totals": {
-    "commits": 32,
-    "repos": 3
+    "commits": 36,
+    "repos": 4
   },
   "entries": [
+    {
+      "repo": "dsh-agentledger",
+      "message": "state: 2026-11-01 iteration 1",
+      "short": "b338e1f",
+      "date": "2026-11-01T05:33:20Z",
+      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/b338e1fca9b824d34907bb70330d15ca9e8ce157"
+    },
+    {
+      "repo": "dsh-agentledger",
+      "message": "log: 2026-11-01 #1 skillforge sloplint",
+      "short": "0694a5a",
+      "date": "2026-11-01T05:32:55Z",
+      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/0694a5ab6f718f6f09dbdecc9b6f592003a3a6fc"
+    },
+    {
+      "repo": "skillforge",
+      "message": "feat(frontend-design): make the \"no AI tells\" checklist executable with sloplint",
+      "short": "683a857",
+      "date": "2026-11-01T05:31:56Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/683a857360afb9474c59d303e7810e856c03481a"
+    },
+    {
+      "repo": "growth",
+      "message": "docs: start the growth log with ten lessons already paid for",
+      "short": "3041128",
+      "date": "2026-11-01T03:52:10Z",
+      "url": "https://github.com/hexinzxq/growth/commit/3041128acb6b65181488bc601a958f18acc828ec"
+    },
     {
       "repo": "dsh-agentledger",
       "message": "research: 2026-10-31 archive-only snapshot (gate: week_of is 1 day old)",
