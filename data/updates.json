@@ -1,12 +1,117 @@
 {
-  "generated_at": "2026-11-01T17:17:46Z",
+  "generated_at": "2026-11-02T04:49:22Z",
   "window_days": 14,
   "owner": "hexinzxq",
   "totals": {
-    "commits": 36,
+    "commits": 40,
     "repos": 4
   },
   "entries": [
+    {
+      "repo": "dsh-agentledger",
+      "message": "log: 2026-11-02 #3 color-mix/light-dark resolution",
+      "short": "2a039fd",
+      "date": "2026-11-02T04:33:02Z",
+      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/2a039fd7f58d982141d275796be317e7486cddae"
+    },
+    {
+      "repo": "skillforge",
+      "message": "feat(frontend-design): resolve color-mix(), var() chains and light-dark()",
+      "short": "5f8b9eb",
+      "date": "2026-11-02T04:32:57Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/5f8b9eb03023cd96c3a8005cfa80f56b106e00c4"
+    },
+    {
+      "repo": "dsh-agentledger",
+      "message": "log: 2026-11-02 #2 dangling-var typo-only",
+      "short": "1297466",
+      "date": "2026-11-02T00:03:00Z",
+      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/1297466f14e60293bf92172b5bda279029235bab"
+    },
+    {
+      "repo": "skillforge",
+      "message": "fix(frontend-design): only flag var() names that look like typos",
+      "short": "f0bfa15",
+      "date": "2026-11-02T00:02:55Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/f0bfa15e8989f89af6330239853980eadfa188db"
+    },
+    {
+      "repo": "dsh-agentledger",
+      "message": "log: fix duplicate counter for 2026-11-02 #1",
+      "short": "6632091",
+      "date": "2026-11-02T00:02:00Z",
+      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/663209139e9b2a88a1219c6b2cceaac2d1cabac6"
+    },
+    {
+      "repo": "dsh-agentledger",
+      "message": "log: 2026-11-02 #1 sloplint follows linked stylesheets; clear pending_push",
+      "short": "c19caa8",
+      "date": "2026-11-02T00:01:52Z",
+      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/c19caa8b86a3a56a2f70a138ff1f7cde09255b9d"
+    },
+    {
+      "repo": "skillforge",
+      "message": "feat(frontend-design): sloplint follows a page's local stylesheets",
+      "short": "1e36072",
+      "date": "2026-11-02T00:01:47Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/1e3607216d615b941d432b32144c6535c51d1f77"
+    },
+    {
+      "repo": "dsh-agentledger",
+      "message": "state: record pending push for next window",
+      "short": "3644928",
+      "date": "2026-11-01T14:46:25Z",
+      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/36449288afe92d891163ef6712797f02a4c2ff7d"
+    },
+    {
+      "repo": "dsh-agentledger",
+      "message": "log: 2026-11-01 #4 #5 + push blocked note",
+      "short": "e044cde",
+      "date": "2026-11-01T13:40:52Z",
+      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/e044cde5e51e3a50fe8f2dcf641a1fe0509e9a8a"
+    },
+    {
+      "repo": "skillforge",
+      "message": "test(validate): cover unreferenced support files and both mention forms",
+      "short": "303a4ab",
+      "date": "2026-11-01T13:38:56Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/303a4abbd91c69e9f8027a77e7b07f2f42c63d08"
+    },
+    {
+      "repo": "skillforge",
+      "message": "feat(validate): flag support files no line points at",
+      "short": "7b10c9f",
+      "date": "2026-11-01T13:38:38Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/7b10c9fe4eea6f528d81b805bec62295ffabc641"
+    },
+    {
+      "repo": "skillforge",
+      "message": "feat(frontend-design): catch dangling var() references and exempt fallbacks",
+      "short": "0d97ab1",
+      "date": "2026-11-01T13:38:26Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/0d97ab17a0769a8adb0d75aab6027f00b7a23ca9"
+    },
+    {
+      "repo": "dsh-agentledger",
+      "message": "log: 2026-11-01 #2 #3 skillforge",
+      "short": "324a24c",
+      "date": "2026-11-01T10:39:42Z",
+      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/324a24cf97392b6f26a6deb63d8b989ae79fec96"
+    },
+    {
+      "repo": "skillforge",
+      "message": "feat(frontend-design): --all-blocks checks every theme scope in one report",
+      "short": "0122b7d",
+      "date": "2026-11-01T10:36:22Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/0122b7d68babb3d58f4a9683a53487df66175ba0"
+    },
+    {
+      "repo": "skillforge",
+      "message": "fix(frontend-design): sloplint precision, measured on 2,000 lines of real CSS",
+      "short": "c01c256",
+      "date": "2026-11-01T10:31:40Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/c01c256dd9021ebcfbbbd69a0be2b24096ead0df"
+    },
     {
       "repo": "dsh-agentledger",
       "message": "state: 2026-11-01 iteration 1",
@@ -181,83 +286,6 @@
       "short": "62b046f",
       "date": "2026-10-30T14:47:35Z",
       "url": "https://github.com/hexinzxq/skillforge/commit/62b046f2c2537a091dd56c2b043a28083604c374"
-    },
-    {
-      "repo": "skillforge",
-      "message": "feat(tools): spec validator with 19 tests",
-      "short": "8cbc7b8",
-      "date": "2026-10-30T14:47:35Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/8cbc7b8a8bd71f879f527af81e7e8c5d00f1edd0"
-    },
-    {
-      "repo": "skillforge",
-      "message": "feat(skills): commit-craft, debug-probe, test-gap",
-      "short": "4ec8179",
-      "date": "2026-10-30T14:47:35Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/4ec8179e266f872ddaea0fd4a95eadf905249a9a"
-    },
-    {
-      "repo": "skillforge",
-      "message": "feat(skills): ui-critique and design-tokens",
-      "short": "a0e0b64",
-      "date": "2026-10-30T14:47:35Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/a0e0b64222f49ba23ba3ad3a9d11dcb0c7f43c86"
-    },
-    {
-      "repo": "dsh-agentledger",
-      "message": "chore(research): 2026-10-30 snapshot #2 (41 entries) for the next pick",
-      "short": "747149b",
-      "date": "2026-10-30T14:38:17Z",
-      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/747149b5645a955c413697d32b1e0ad2425aa8ab"
-    },
-    {
-      "repo": "dsh-agentledger",
-      "message": "docs: one routine file the daily windows can point at",
-      "short": "153afd7",
-      "date": "2026-10-30T14:30:11Z",
-      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/153afd7685070da4351a0e1988a32d94910f1531"
-    },
-    {
-      "repo": "dsh-agentledger",
-      "message": "chore: record week 1 pick and make the iteration log greppable",
-      "short": "29e4b2f",
-      "date": "2026-10-30T14:29:35Z",
-      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/29e4b2fa10b340db599d9a8904b5f5a6a9ce19c7"
-    },
-    {
-      "repo": "dsh-agentledger",
-      "message": "feat(cli): amem command line, stdlib only",
-      "short": "93c798f",
-      "date": "2026-10-30T14:29:06Z",
-      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/93c798f889987b767ba7b44001b0845ee5f3297b"
-    },
-    {
-      "repo": "dsh-agentledger",
-      "message": "feat(server): FastAPI API + zero-build web viewer",
-      "short": "6fd0147",
-      "date": "2026-10-30T14:27:22Z",
-      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/6fd0147311fdab4fa2f746f737f0b18a8395fef8"
-    },
-    {
-      "repo": "dsh-agentledger",
-      "message": "feat(mcp): dependency-free MCP stdio server with 3-layer tools",
-      "short": "9d34576",
-      "date": "2026-10-30T14:25:46Z",
-      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/9d34576f6b5a22c1b009cfe0ebf4fe0fa9b159bf"
-    },
-    {
-      "repo": "dsh-agentledger",
-      "message": "feat: deterministic extraction + local TF-IDF embeddings",
-      "short": "9b1d3b9",
-      "date": "2026-10-30T14:24:27Z",
-      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/9b1d3b9bfa5e4ef091e2f09a3f1f4fc5751ca30b"
-    },
-    {
-      "repo": "dsh-agentledger",
-      "message": "chore: scaffold project, weekly research pipeline, and storage layer",
-      "short": "6d709a3",
-      "date": "2026-10-30T14:22:41Z",
-      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/6d709a3180caebe31e509ab15e18043d6b730b95"
     }
   ]
 }
