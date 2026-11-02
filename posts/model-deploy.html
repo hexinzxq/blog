@@ -41,6 +41,16 @@ KV cache ≈ 2 × 层数 × 头维度 × 上下文长度 × 批大小 × 2 字�
 例：7B 模型 Q4_K_M 约 4.4GB，32k 上下文再吃掉 2～3GB → 8GB 显存刚好，留 1GB 给系统</code></pre>
     <div class="note"><p><strong>注意事项：</strong>显存爆掉最先表现为「模型加载成功但第一句话就没完没了地卡」，不是报错。看到输出变慢十倍，先砍上下文长度，再考虑换更小的量化。</p></div>
 
+    <h2 id="where">模型和工具在哪拿</h2>
+    <ul>
+      <li><strong>Ollama 官方模型库</strong>：<a href="https://ollama.com/library" rel="noopener">ollama.com/library</a> —— 名字直接对应 <code>ollama pull</code>，选带 <code>-instruct</code> 和量化后缀的版本</li>
+      <li><strong>Hugging Face</strong>：<a href="https://huggingface.co/Qwen/Qwen2.5-7B-Instruct-GGUF" rel="noopener">Qwen/Qwen2.5-7B-Instruct-GGUF</a> —— 认准 <code>Q4_K_M</code> 这一个文件就够起步，别整包下</li>
+      <li><strong>ModelScope（国内下载快）</strong>：<a href="https://modelscope.cn/models/Qwen/Qwen2.5-7B-Instruct-GGUF" rel="noopener">modelscope.cn 同名仓库</a> —— 文件与 HF 一致，<code>pip install modelscope</code> 后 <code>modelscope download</code> 能续传</li>
+      <li><strong>llama.cpp</strong>：<a href="https://github.com/ggml-org/llama.cpp" rel="noopener">ggml-org/llama.cpp</a> —— 想自己调 KV cache 和批大小就从这编译</li>
+      <li><strong>LM Studio</strong>：<a href="https://lmstudio.ai" rel="noopener">lmstudio.ai</a> —— 图形界面里内置搜索，下载后同样能开 <code>/v1</code> 端点</li>
+    </ul>
+    <div class="note"><p><strong>注意事项：</strong>同一个模型名在不同仓库的量化文件不保证一致，灌进 Ollama 前先看文件名里的量化标记（<code>Q4_K_M</code>、<code>Q8_0</code>），别混着装。</p></div>
+
     <h2 id="install">第二步：装环境</h2>
     <pre><code># macOS / Linux
 curl -fsSL https://ollama.com/install.sh | sh
@@ -100,6 +110,7 @@ export async function POST(req: Request) {
       <li><a href="#why">什么时候该自己跑</a></li>
       <li><a href="#tools">三件工具</a></li>
       <li><a href="#size">先算显存</a></li>
+      <li><a href="#where">模型去哪拿</a></li>
       <li><a href="#install">装环境</a></li>
       <li><a href="#run">跑第一句</a></li>
       <li><a href="#frontend">接进前端</a></li>
