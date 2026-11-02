@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T04:52:09Z",
+  "generated_at": "2026-11-02T20:55:37Z",
   "window_days": 14,
   "owner": "hexinzxq",
   "totals": {
@@ -7,6 +7,34 @@
     "repos": 4
   },
   "entries": [
+    {
+      "repo": "dsh-agentledger",
+      "message": "log: 2026-11-02 #5 installer vendor discovery",
+      "short": "322ec60",
+      "date": "2026-11-02T10:31:43Z",
+      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/322ec609d7bd27a5b0f8bcc038dbd5dc5479a6c3"
+    },
+    {
+      "repo": "skillforge",
+      "message": "fix(install): discover the 61 vendored skills, at three different depths",
+      "short": "23ed35b",
+      "date": "2026-11-02T10:31:32Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/23ed35bc2e6a66f08c927f9c4fe0ab4bfa85fe2c"
+    },
+    {
+      "repo": "dsh-agentledger",
+      "message": "log: 2026-11-02 #4 all-blocks cascade",
+      "short": "9be9fd5",
+      "date": "2026-11-02T05:31:37Z",
+      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/9be9fd5cb933ee5726a5d4c754d7d851ab4c1322"
+    },
+    {
+      "repo": "skillforge",
+      "message": "fix(frontend-design): read --all-blocks as one cascade, not N isolated blocks",
+      "short": "245e20e",
+      "date": "2026-11-02T05:31:32Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/245e20e1b49d265a21c0732bff46f1d6081d5e2f"
+    },
     {
       "repo": "dsh-agentledger",
       "message": "log: 2026-11-02 #3 color-mix/light-dark resolution",
@@ -258,34 +286,6 @@
       "short": "84b88ec",
       "date": "2026-10-30T17:32:59Z",
       "url": "https://github.com/hexinzxq/skillforge/commit/84b88ec2a667a85461eed486e83622d75cbd940d"
-    },
-    {
-      "repo": "skillforge",
-      "message": "feat(vendor): add 20 curated skills from agent-skills-standard",
-      "short": "f33cd59",
-      "date": "2026-10-30T17:30:50Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/f33cd59f4769d1d0ad4f95f2bd4764bb45759807"
-    },
-    {
-      "repo": "skillforge",
-      "message": "feat(skills): swap starter set for frontend-design, vendor three skill libraries",
-      "short": "a72566a",
-      "date": "2026-10-30T17:27:14Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/a72566a09e1a66f459d502a2f7a9f5b041314ec0"
-    },
-    {
-      "repo": "dsh-agentledger",
-      "message": "chore: switch the daily target to skillforge",
-      "short": "5e05fa0",
-      "date": "2026-10-30T14:48:35Z",
-      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/5e05fa0f9decd348d68f94a6a9a60c9985daf0d9"
-    },
-    {
-      "repo": "skillforge",
-      "message": "feat(install): installer, CI, and the daily routine",
-      "short": "62b046f",
-      "date": "2026-10-30T14:47:35Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/62b046f2c2537a091dd56c2b043a28083604c374"
     }
   ]
 }
