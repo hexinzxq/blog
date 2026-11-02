@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>在自己电脑上跑一个开源模型 · 何鑫</title>
+<meta name="description" content="从下载、量化、显存估算到接进前端：本地部署开源模型的一条完整路线，附踩过的坑。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23101418'/><path d='M9 21V11h2v4h4v-4h2v10h-2v-4h-4v4z' fill='%23FFB020'/></svg>">
+<link rel="stylesheet" href="../assets/post.css">
+</head>
+<body>
+<div class="wrap top">
+  <a class="back" href="../index.html">← 回首页</a>
+  <h1>在自己电脑上跑一个开源模型</h1>
+  <p class="dek">从下载、量化、显存估算，到把它接进自己的前端。写给第一次动手的人，也写给我下一次忘了的时候。</p>
+  <p class="meta"><time datetime="2026-11-02">2026-11-02</time><span>约 12 分钟</span><span>macOS / Linux / Windows 通用</span></p>
+</div>
+
+<div class="wrap layout">
+  <article>
+    <h2 id="why">先说清楚：什么时候该自己跑</h2>
+    <p>三条判据，命中两条再动手：一是数据不能出本机，二是要反复压测同一个模型（换量化、换上下文、比延迟），三是断网也要能用。只是偶尔问几句话，用 API 更省事也更便宜——显卡和电费不便宜。</p>
+
+    <h2 id="tools">三件工具，先挑一件</h2>
+    <table>
+      <thead><tr><th>工具</th><th>适合</th><th>代价</th></tr></thead>
+      <tbody>
+        <tr><td><code>Ollama</code></td><td>想十分钟内跑起来，接受它帮你决定参数</td><td>底层是 llama.cpp，参数藏得深</td></tr>
+        <tr><td><code>llama.cpp</code></td><td>要自己控 KV cache、批大小、量化文件</td><td>命令行长，编译要过一遍</td></tr>
+        <tr><td><code>LM Studio</code></td><td>图形界面、给人演示</td><td>自动化和脚本不友好</td></tr>
+      </tbody>
+    </table>
+    <p>下面的步骤以 Ollama 为主线，需要抠参数的地方会标出 llama.cpp 的等价做法。</p>
+
+    <h2 id="size">第一步：先算显存，再挑模型</h2>
+    <p>别先下模型，先算账。一条足够用的估算法则：</p>
+    <pre><code>权重占用 ≈ 参数量 × 每参数字节数
+   Q4_K_M ≈ 0.5 字节/参数      Q8_0 ≈ 1 字节/参数
+KV cache ≈ 2 × 层数 × 头维度 × 上下文长度 × 批大小 × 2 字节(fp16)
+
+例：7B 模型 Q4_K_M 约 4.4GB，32k 上下文再吃掉 2～3GB → 8GB 显存刚好，留 1GB 给系统</code></pre>
+    <div class="note"><p><strong>注意事项：</strong>显存爆掉最先表现为「模型加载成功但第一句话就没完没了地卡」，不是报错。看到输出变慢十倍，先砍上下文长度，再考虑换更小的量化。</p></div>
+
+    <h2 id="install">第二步：装环境</h2>
+    <pre><code># macOS / Linux
+curl -fsSL https://ollama.com/install.sh | sh
+
+# 只想用 Homebrew 装
+brew install ollama && brew services start ollama
+
+# Windows 直接用安装包，装完 ollama serve 已在后台跑</code></pre>
+    <p>Apple Silicon 走 Metal，默认就启用；N 卡机器确认驱动版本够新，CUDA 跑在 12.x 上最稳。</p>
+
+    <h2 id="run">第三步：拉模型、跑第一句</h2>
+    <ol class="steps">
+      <li><strong>拉一个够小的模型试水</strong>
+        <pre><code>ollama pull qwen2.5:7b-instruct-q4_K_M
+ollama run qwen2.5:7b-instruct-q4_K_M "用一句话解释什么是 KV cache"</code></pre>
+      </li>
+      <li><strong>限定上下文，别让它自动吃满</strong>
+        <pre><code>ollama run qwen2.5:7b-instruct-q4_K_M --context-length 8192</code></pre>
+        等价地在 llama.cpp 里是 <code>-c 8192</code>。上下文是显存的第一号杀手。
+      </li>
+      <li><strong>确认它开的是 OpenAI 兼容端点</strong>
+        <pre><code>curl http://127.0.0.1:11434/v1/models</code></pre>
+        能返回 JSON 列表就通了，后面接前端靠的就是这个 <code>/v1</code>。
+      </li>
+    </ol>
+
+    <h2 id="frontend">第四步：接进前端</h2>
+    <p>浏览器直连 <code>http://127.0.0.1:11434/v1</code> 会撞 CORS，也等于把本机端口暴露给任意页面。正确做法是让前端打到自己的代理，由服务端转发：</p>
+    <pre><code>// app/api/chat/route.ts（Next.js，nodejs runtime）
+export async function POST(req: Request) {
+  const body = await req.json();
+  const r = await fetch("http://127.0.0.1:11434/v1/chat/completions", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ ...body, stream: true }),
+  });
+  return new Response(r.body, { headers: { "Content-Type": "text/event-stream" } });
+}</code></pre>
+    <div class="note"><p><strong>注意事项：</strong>把 <code>stream: true</code> 原样转发，别自己拼字符串——SSE 的 <code>data:</code> 前缀丢一个字节，前端就会一直转圈。</p></div>
+
+    <h2 id="pits">我踩过的坑</h2>
+    <ul>
+      <li><strong>模型下到一半断了</strong>：Ollama 会重试但不续传，换镜像或挂代理更省事；<code>~/.ollama/models</code> 里能看到半截文件，删掉重拉。</li>
+      <li><strong>端口被占</strong>：本机已有服务在 <code>3000</code>/<code>11434</code> 时，<code>ollama serve</code> 会静默换端口，先 <code>lsof -i :11434</code> 看一眼。</li>
+      <li><strong>Mac 上内存交换</strong>：显存不够时系统会拿内存顶，风扇狂转、响应变慢，<code>vm_stat</code> 里的 swap 一直在涨就是信号。</li>
+      <li><strong>并发不是免费的</strong>：Ollama 默认串行处理请求，第二个请求排队；要并发得开 <code>OLLAMA_NUM_PARALLEL</code>，同时把 KV cache 的显存预算翻倍。</li>
+      <li><strong>别把 <code>OLLAMA_HOST=0.0.0.0</code> 开在咖啡厅 Wi-Fi 上</strong>：那等于把模型免费给整个局域网用。</li>
+    </ul>
+
+    <h2 id="next">接下来可以做的</h2>
+    <p>跑通之后，值得花时间的顺序是：换成自己的提示词测稳定性 → 用同一批问题对比 Q4 和 Q8 的差别 → 再决定要不要上更大的模型。先加硬件往往是最贵的那条路。</p>
+  </article>
+
+  <nav class="toc" aria-label="目录">
+    <p>目录</p>
+    <ol>
+      <li><a href="#why">什么时候该自己跑</a></li>
+      <li><a href="#tools">三件工具</a></li>
+      <li><a href="#size">先算显存</a></li>
+      <li><a href="#install">装环境</a></li>
+      <li><a href="#run">跑第一句</a></li>
+      <li><a href="#frontend">接进前端</a></li>
+      <li><a href="#pits">踩过的坑</a></li>
+      <li><a href="#next">接下来</a></li>
+    </ol>
+  </nav>
+</div>
+</body>
+</html>

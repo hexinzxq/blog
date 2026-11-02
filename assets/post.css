@@ -1,0 +1,64 @@
+/* 单篇文章的版面：一页纸、左侧留白、右侧目录。设计计划写在下面。
+   PALETTE 沿用站点的 bg #101418 / text #EAF0F4 / muted #93A1AB / accent #FFB020
+   TYPE 正文 17px/1.85 系统无衬线，命令与数字用等宽；标题字重 600，不做渐变、不做阴影
+   GRID 正文 68ch 单栏，右侧 200px 目录在 >=1080px 才出现，正文与目录之间 64px
+   动效 只有目录当前项的下划线，150ms 过渡，其余静止 */
+:root{
+  --bg:#101418; --surface:#171E24; --text:#EAF0F4; --muted:#93A1AB;
+  --accent:#FFB020; --line:#242C34;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--bg); color:var(--text);
+  font:17px/1.85 -apple-system,"PingFang SC","Segoe UI",system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(255,176,32,.35)}
+a:hover{border-bottom-color:var(--accent)}
+code,kbd{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9em}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+
+.top{padding:56px 0 0}
+.top .back{font-size:14px;color:var(--muted);border:0}
+.top h1{font-size:clamp(30px,4.4vw,46px);line-height:1.25;margin:18px 0 10px;letter-spacing:-.02em}
+.top .dek{color:var(--muted);margin:0;max-width:46ch}
+.top .meta{color:var(--muted);font-size:14px;margin-top:18px;display:flex;gap:14px;flex-wrap:wrap}
+
+.layout{display:grid;grid-template-columns:minmax(0,68ch) 200px;gap:64px;padding:48px 0 96px}
+article{min-width:0}
+article h2{font-size:24px;margin:56px 0 14px;letter-spacing:-.01em;scroll-margin-top:24px}
+article h2:first-child{margin-top:0}
+article h3{font-size:18px;margin:32px 0 10px;color:#fff}
+article p{margin:0 0 18px}
+article ul,article ol{margin:0 0 18px;padding-left:1.25em}
+article li{margin:6px 0}
+article li::marker{color:var(--muted)}
+
+pre{background:var(--surface);border:1px solid var(--line);border-radius:10px;
+    padding:16px 18px;overflow:auto;margin:0 0 20px;font-size:14px;line-height:1.7}
+pre code{font-size:14px}
+
+.note{border-left:2px solid var(--accent);background:rgba(255,176,32,.06);
+      padding:14px 18px;border-radius:0 8px 8px 0;margin:0 0 22px}
+.note strong{color:var(--accent);font-weight:600}
+.note p:last-child{margin:0}
+
+table{border-collapse:collapse;width:100%;margin:0 0 22px;font-size:15px}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:500}
+
+.steps{counter-reset:s;list-style:none;padding:0}
+.steps>li{position:relative;padding-left:44px;margin:0 0 26px}
+.steps>li::before{counter-increment:s;content:counter(s);
+  position:absolute;left:0;top:2px;width:28px;height:28px;border-radius:50%;
+  display:grid;place-items:center;font:600 13px/1 ui-monospace,monospace;
+  color:var(--accent);border:1px solid rgba(255,176,32,.4)}
+
+.toc{position:sticky;top:40px;align-self:start;font-size:14px}
+.toc p{margin:0 0 10px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;font-size:12px}
+.toc ol{list-style:none;margin:0;padding:0}
+.toc li{margin:8px 0}
+.toc a{color:var(--muted);border:0}
+.toc a:hover,.toc a.on{color:var(--text)}
+@media (max-width:1079px){.layout{grid-template-columns:minmax(0,1fr)}.toc{display:none}}

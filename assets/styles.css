@@ -429,3 +429,13 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
 
   .entry::before { left: -21px; }
 }
+
+/* 文章列表：一行一条，日期在左，标题是唯一强调 */
+.writing h2{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:64px 0 18px;font-weight:500}
+.posts{list-style:none;margin:0;padding:0}
+.posts li{display:grid;grid-template-columns:110px 1fr;gap:18px;padding:16px 0;border-top:1px solid rgba(255,255,255,.07)}
+.posts time{color:var(--muted);font:13px/1.9 ui-monospace,monospace}
+.posts a{font-size:17px;color:var(--text);border-bottom:1px solid rgba(255,176,32,.25)}
+.posts a:hover{border-bottom-color:var(--accent)}
+.posts .muted{grid-column:2;color:var(--muted);font-size:14px;margin-top:4px}
+@media (max-width:640px){.posts li{grid-template-columns:1fr;gap:4px}.posts .muted{grid-column:1}}
