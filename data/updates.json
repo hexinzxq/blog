@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T04:55:05Z",
+  "generated_at": "2026-11-03T18:43:23Z",
   "window_days": 14,
   "owner": "hexinzxq",
   "totals": {
@@ -7,6 +7,41 @@
     "repos": 4
   },
   "entries": [
+    {
+      "repo": "skillforge",
+      "message": "fix(frontend-design): --strict --quiet must print what failed",
+      "short": "33794c2",
+      "date": "2026-11-03T13:34:29Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/33794c22bad3d03f61ebfda6284f845fa105be03"
+    },
+    {
+      "repo": "skillforge",
+      "message": "fix(frontend-design): read no-focus-replacement across the whole scan",
+      "short": "6919044",
+      "date": "2026-11-03T13:34:10Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/6919044662eae6543a45336aa2798b02499d6bfb"
+    },
+    {
+      "repo": "skillforge",
+      "message": "feat(frontend-design): fail a viewport that forbids pinch-zoom",
+      "short": "6b482f3",
+      "date": "2026-11-03T13:33:28Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/6b482f34baea99790c8771d99d159b8426d13bdb"
+    },
+    {
+      "repo": "skillforge",
+      "message": "feat(frontend-design): fail a full page that has no viewport meta",
+      "short": "650c051",
+      "date": "2026-11-03T13:32:55Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/650c051c91acbcfe53431291888f62053ef7b4a8"
+    },
+    {
+      "repo": "skillforge",
+      "message": "fix(frontend-design): see 100vh through calc() and max-height",
+      "short": "55cf3aa",
+      "date": "2026-11-03T13:32:03Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/55cf3aa9b30eb291d27442f5650d0f57b82db3e3"
+    },
     {
       "repo": "dsh-agentledger",
       "message": "log: 2026-11-02 #5 installer vendor discovery",
@@ -251,41 +286,6 @@
       "short": "4872126",
       "date": "2026-10-31T02:13:56Z",
       "url": "https://github.com/hexinzxq/open-chat/commit/48721263fb1188b051bb7278622c8b8dd339d124"
-    },
-    {
-      "repo": "dsh-agentledger",
-      "message": "chore(state): record three iterations on 2026-10-31",
-      "short": "9adf0fa",
-      "date": "2026-10-31T00:04:08Z",
-      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/9adf0fae064578968ee9950ebe7ecf16a2c39783"
-    },
-    {
-      "repo": "skillforge",
-      "message": "feat(validate): compile shipped scripts, because a broken script fails at runtime",
-      "short": "441773b",
-      "date": "2026-10-31T00:04:03Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/441773bf912d85e3e5be9d15914225a93c1bcb63"
-    },
-    {
-      "repo": "skillforge",
-      "message": "feat(frontend-design): check contrast with a script instead of by hand",
-      "short": "52d15e2",
-      "date": "2026-10-31T00:03:07Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/52d15e27d18d35dddf361eb6b7b4a9e06ca89730"
-    },
-    {
-      "repo": "skillforge",
-      "message": "fix(ci): validate vendored skills and drop steps pointing at deleted files",
-      "short": "8d0016c",
-      "date": "2026-10-31T00:02:23Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/8d0016cb0cf6b2e3a4b833e0eb52970b1d5e256a"
-    },
-    {
-      "repo": "skillforge",
-      "message": "docs(readme): add a one-line catalog of every skill in the repo",
-      "short": "84b88ec",
-      "date": "2026-10-30T17:32:59Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/84b88ec2a667a85461eed486e83622d75cbd940d"
     }
   ]
 }
