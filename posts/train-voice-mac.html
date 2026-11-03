@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>在 Mac 上从零训一个自己的声音 · 何鑫</title>
+<meta name="description" content="从收集语音、切片、提特征、训练 RVC，到换声、混音、导出：Mac 上把自己或喜欢的角色训成一个能唱歌的声音模型，附全部命令和踩过的坑。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23101418'/><path d='M9 21V11h2v4h4v-4h2v10h-2v-4h-4v4z' fill='%23FFB020'/></svg>">
+<link rel="stylesheet" href="../assets/post.css">
+</head>
+<body>
+<div class="wrap top">
+  <a class="back" href="../index.html">← 回首页</a>
+  <h1>在 Mac 上从零训一个自己的声音</h1>
+  <p class="dek">从一段十分钟的干声，到一首能听的翻唱。写给第一次动手的人，也写给下次已经忘了这次怎么跑通的我。</p>
+  <p class="meta"><time datetime="2026-11-03">2026-11-03</time><span>约 15 分钟</span><span>macOS / Apple Silicon</span></p>
+</div>
+
+<div class="wrap layout">
+  <article>
+    <h2 id="why">先说清楚：这套东西能干什么，不能干什么</h2>
+    <p>RVC（Retrieval-based Voice Conversion）做的事情只有一件：<strong>保留原音频的内容、语气和节奏，把音色换成你的模型</strong>。所以它不能无中生有——想让它唱歌，你得先有一段别人唱好的干声，它只负责换嗓子。</p>
+    <p>三条判据，命中两条再动手：一是有稳定的语料来源（自己的录音，或者某个角色的语音包），二是要反复出同一批成品（翻唱、配音、口播），三是能接受几小时的空转。只想听个新鲜，找个在线工具更快。</p>
+    <p>还有一个前提要先接受：<strong>模型的上限由语料决定，不由训练轮数决定</strong>。拿合成音（TTS）去训，出来的声音一定带一股机械味，再多跑两百轮也救不回来——这条我踩过，后面细说。</p>
+
+    <h2 id="hardware">硬件与时间预算</h2>
+    <table>
+      <thead><tr><th>阶段</th><th>M 系列 Mac（实测）</th><th>说明</th></tr></thead>
+      <tbody>
+        <tr><td>切片 + 提特征（10 分钟语料）</td><td>2～3 分钟</td><td>CPU 跑，跟训练抢核</td></tr>
+        <tr><td>训 32k 模型 200 轮</td><td>约 1 小时</td><td>最快能听的一档</td></tr>
+        <tr><td>训 40k 模型 200 轮</td><td>约 5～6 小时</td><td>1.5～1.7 分钟/轮，音质更好</td></tr>
+        <tr><td>换声推理（3 分钟歌）</td><td>2～3 分钟</td><td>f0 用 rmvpe 稍慢但准</td></tr>
+      </tbody>
+    </table>
+    <div class="note"><p><strong>注意事项：</strong>训练时机器会持续吃满 CPU/GPU，风扇基本不停。别在同一台机器上同时跑训练和推理，两边都会变得很慢，而且偶发静默崩溃。</p></div>
+
+    <h2 id="env">第一步：把环境装好</h2>
+    <p>用独立的 venv，别污染系统 Python。Python 3.10～3.12 都行，这次用的是 3.12。</p>
+    <pre><code># 1. 拿代码
+git clone https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI.git
+cd Retrieval-based-Voice-Conversion-WebUI
+
+# 2. 建虚拟环境（路径随你，记住它）
+python3.12 -m venv .venv
+source .venv/bin/activate
+pip install -U pip
+
+# 3. 装依赖：Apple Silicon 用 CPU/MPS 版 torch
+pip install torch torchaudio
+pip install -r requirements.txt
+
+# 4. 下载底模（必须，不然训练没有起点）
+#    assets/pretrained_v2/ 下需要 f0G40k.pth / f0D40k.pth（40k）
+#    f0G32k.pth / f0D32k.pth（32k），以及 assets/hubert_base/
+python tools/download_models.py    # 或者按 README 手动放</code></pre>
+    <p>装完先跑一次 <code>python webui.py</code>，能打开 <code>http://localhost:7865</code> 就说明环境没问题。后面命令行出问题时，回图形界面跑一遍，是判断「环境坏了」还是「命令写错了」最快的办法。</p>
+
+    <h2 id="data">第二步：准备语料（决定成败的一步）</h2>
+    <p>目标是 <strong>5～10 分钟干净人声</strong>。少了学不像，多了收益递减，而且训练时间线性增加。</p>
+    <ul>
+      <li><strong>自己录</strong>：手机自带录音即可，安静房间，离麦 15cm，正常音量，别离太近喷麦。一次录 10～20 秒，说点有情绪的话，别念课文——语气越平，模型越机械。</li>
+      <li><strong>从视频里扒</strong>：<code>yt-dlp -f bestaudio -x --audio-format wav &lt;URL&gt;</code>。优先找标注「语音合集」「纯享版」的，带 BGM 的先用 demucs 分轨：<code>python -m demucs --two-stems=vocals -n htdemucs input.wav</code>，取 <code>vocals.wav</code>。</li>
+      <li><strong>统一规格</strong>：单声道、wav、16bit。采样率交给后面的预处理，不用手动转。</li>
+    </ul>
+    <div class="note"><p><strong>注意事项：</strong>不要把不同人的声音混进一个实验（除非你就要多人模型）。同一个人的语料里，情绪越丰富越好——笑、惊讶、撒娇、生气，各留几条，这是「像不像活人」的关键，比多训 100 轮有用得多。</p></div>
+
+    <h2 id="preprocess">第三步：切片、重采样、提音高</h2>
+    <p>RVC 的训练脚本吃的是切好的 3.5～4 秒小段，外加每段的 f0（音高）和 HuBERT 特征。这几个目录别手动建，让脚本生成。</p>
+    <pre><code>cd /path/to/Retrieval-based-Voice-Conversion-WebUI
+
+# 参数顺序：语料目录 采样率 进程数 实验目录 是否禁用并行 切片长度
+python train/preprocess.py \
+  "/path/to/your_dataset" \
+  40000 4 "`pwd`/logs/myspeaker" False 3.7</code></pre>
+    <p>跑完 <code>logs/myspeaker/</code> 下会多出 <code>0_gt_wavs</code>（目标采样率的切片）、<code>1_16k_wavs</code>（提特征用的 16k 副本）、<code>2a_f0</code>、<code>2b-f0nsf</code>。数量对不上就说明切片失败，先解决这个再往下走。</p>
+    <pre><code># 提 HuBERT 特征（v2 是 768 维，落在 3_feature768/）
+python train/dataset/extract_hubert_feature.py \
+  cpu 1 0 "`pwd`/logs/myspeaker" v2 False</code></pre>
+    <div class="note"><p><strong>注意事项：</strong>这一步会加载 <code>assets/hubert_base</code>，日志里出现 <code>masked_spec_embed MISSING</code> 是正常的，不代表加载失败。</p></div>
+
+    <h2 id="config">第四步：配置文件（最容易卡住的地方）</h2>
+    <p>训练脚本启动时会去读 <code>logs/myspeaker/config.json</code>，而这个文件<strong>不会</strong>在预处理时自动生成。图形界面会帮你写，命令行不会。仓库里 <code>configs/v2/</code> 只有 32k 和 48k 的模板，40k 的模板缺失——我第一次跑 40k 就是这么崩的，日志里报：</p>
+    <pre><code>json.decoder.JSONDecodeError: Extra data: line 1 column 4 (char 3)</code></pre>
+    <p>打开 <code>config.json</code> 一看，里面只有一行 <code>404: Not Found</code>。两个办法：把 <code>configs/v2/32k.json</code> 复制过去改参数，或者直接写一份 40k 的：</p>
+    <pre><code>{
+  "train": { "log_interval": 200, "seed": 1234, "epochs": 20000,
+             "learning_rate": 1e-4, "betas": [0.8, 0.99], "eps": 1e-9,
+             "batch_size": 4, "lr_decay": 0.999875, "segment_size": 12800,
+             "init_lr_ratio": 1, "warmup_epochs": 0, "c_mel": 45, "c_kl": 1.0 },
+  "data": { "max_wav_value": 32768.0, "sampling_rate": 40000,
+            "filter_length": 2048, "hop_length": 400, "win_length": 2048,
+            "n_mel_channels": 125, "mel_fmin": 0.0, "mel_fmax": null },
+  "model": { "inter_channels": 192, "hidden_channels": 192, "filter_channels": 768,
+             "n_heads": 2, "n_layers": 6, "kernel_size": 3, "p_dropout": 0,
+             "resblock": "1", "resblock_kernel_sizes": [3,7,11],
+             "resblock_dilation_sizes": [[1,3,5],[1,3,5],[1,3,5]],
+             "upsample_rates": [10,10,2,2], "upsample_initial_channel": 512,
+             "upsample_kernel_sizes": [16,16,4,4],
+             "use_spectral_norm": false, "gin_channels": 256, "spk_embed_dim": 109 }
+}</code></pre>
+    <p>32k 的模板要改三处：<code>sampling_rate</code> 32000、<code>filter_length/hop_length/win_length</code> 1024/320/1024、<code>n_mel_channels</code> 80。别只改采样率，mel 参数不一致会直接训崩。</p>
+    <p>还要一份 <code>filelist.txt</code>，每行是 <code>切片路径|特征路径|f0 路径|f0nsf 路径|说话人 id</code>。图形界面第三步会生成它；纯命令行的话，最省事的做法是用界面点一次「处理数据」，拿到 filelist 和 config 之后，再回到命令行训。</p>
+
+    <h2 id="train">第五步：开训</h2>
+    <pre><code># 40k、带 f0、200 轮、每 25 轮存一次权重
+python -m train.train -e myspeaker -sr 40k -f0 1 -bs 4 -g 0 \
+  -te 200 -se 25 \
+  -pg assets/pretrained_v2/f0G40k.pth \
+  -pd assets/pretrained_v2/f0D40k.pth \
+  -l 0 -c 0 -sw 1 -v v2</code></pre>
+    <table>
+      <thead><tr><th>参数</th><th>含义</th><th>建议</th></tr></thead>
+      <tbody>
+        <tr><td><code>-e</code></td><td>实验名</td><td>对应 <code>logs/&lt;名字&gt;</code></td></tr>
+        <tr><td><code>-sr</code></td><td>采样率</td><td>32k 快、40k 好听，先 32k 验证流程</td></tr>
+        <tr><td><code>-bs</code></td><td>批大小</td><td>8GB 内存用 4，够大就 6～8</td></tr>
+        <tr><td><code>-te</code> / <code>-se</code></td><td>总轮数 / 存档间隔</td><td>200 / 25，够听第一版</td></tr>
+        <tr><td><code>-sw</code></td><td>是否导出小模型</td><td>1 = 每 <code>-se</code> 轮存一个 <code>assets/weights/*.pth</code></td></tr>
+      </tbody>
+    </table>
+    <p>日志里每轮一行 <code>====&gt; Epoch: N [时间] | (耗时)</code>，40k 大约 1.5～1.7 分钟一轮，32k 快三倍左右。断点续训就把 <code>assets/weights</code> 里的模型当 <code>-pg/-pd</code> 传进去。</p>
+    <div class="note"><p><strong>注意事项：</strong>200 轮只是「能听」，不是「好听」。判断标准不是轮数而是试听：每 25 轮存的那一版都拿去换一句固定的话，对比到「再训也没变化」就停。我这次的 200 轮 40k，音色能对上，但语气还是平——问题在语料，不在轮数。</p></div>
+
+    <h2 id="index">第六步：建索引（可选，但强烈建议）</h2>
+    <pre><code>python train/train_index.py "myspeaker" v2 "`pwd`/assets/indices" 8 auto</code></pre>
+    <p>索引让推理时能从训练集里检索相似片段，音色更贴、更稳。建完在 <code>logs/myspeaker/</code> 下会有一个 <code>added_IVF*.index</code>，推理时用 <code>--index-rate</code> 控制它的影响强度。</p>
+
+    <h2 id="infer">第七步：换声</h2>
+    <pre><code>cd /path/to/Retrieval-based-Voice-Conversion-WebUI
+
+KMP_DUPLICATE_LIB_OK=TRUE PYTHONPATH=. python infer/cli.py \
+  --model assets/weights/myspeaker_e200_s1600.pth \
+  --input vocal.wav --output vocal_rvc.wav \
+  --pitch 0 --index-rate 0.75 --f0-method rmvpe \
+  --format wav --overwrite</code></pre>
+    <ul>
+      <li><code>--pitch</code>：跨性别换声的关键。女声模型唱男声原曲给 <code>+5</code> 左右，女转女给 <code>0</code>，别乱加。</li>
+      <li><code>--index-rate</code>：0.6～0.75 比较稳，太高会把原唱的口音也拽过来。</li>
+      <li><code>--f0-method</code>：<code>rmvpe</code> 准，<code>pm</code> 快；<code>pm</code> 跑出来会明显飘。</li>
+    </ul>
+    <div class="note"><p><strong>注意事项：</strong>输出固定是「模型采样率 + 单声道」。32k 模型出来就是 32k/单声道，混音前记得 <code>ffmpeg -ar 48000 -ac 2</code> 升上去，不然会和立体声伴奏对不上、并且听起来发闷。</p></div>
+
+    <h2 id="mix">第八步：混音（成品好不好听，八成在这）</h2>
+    <p>换声出来的干声通常比伴奏小很多。这几条是实测下来能听的配比：</p>
+    <ul>
+      <li><strong>增益</strong>：把人声 RMS 拉到伴奏 RMS 的 <strong>1.15 倍</strong>。我这次干声只有伴奏的 0.3，等于给了 3.7 倍增益，才不被淹。</li>
+      <li><strong>压伴奏</strong>：伴奏整体乘 0.85，再在人声活跃段做约 4dB 的侧链压低（200ms 包络 + 平滑）。</li>
+      <li><strong>EQ</strong>：人声 highpass 110Hz、3kHz +3dB、9kHz +4dB、轻压缩；这一步能把「糊」救回来不少。</li>
+      <li><strong>响度</strong>：最后统一 <code>loudnorm=I=-13:TP=-1.0</code>。</li>
+    </ul>
+    <pre><code>ffmpeg -y -i mix.wav -af "loudnorm=I=-13:TP=-1.0" \
+  -ar 48000 -b:a 320k out.mp3</code></pre>
+    <div class="note"><p><strong>注意事项：</strong>别用聊天软件的「语音条」发成品，会转成低码率 silk，几万块的设备也救不回来。发文件。</p></div>
+
+    <h2 id="pits">踩过的坑，一条条列出来</h2>
+    <table>
+      <thead><tr><th>现象</th><th>原因</th><th>解法</th></tr></thead>
+      <tbody>
+        <tr><td><code>OMP: Error #15 ... libomp.dylib already initialized</code></td><td>多个 OpenMP 运行时被链进同一进程</td><td>命令前加 <code>KMP_DUPLICATE_LIB_OK=TRUE</code></td></tr>
+        <tr><td><code>No module named 'infer'</code></td><td>从仓库根目录直接跑 <code>infer/cli.py</code></td><td>加 <code>PYTHONPATH=.</code></td></tr>
+        <tr><td><code>JSONDecodeError: Extra data</code></td><td><code>config.json</code> 里是一行 <code>404: Not Found</code></td><td>手写配置，见第四步</td></tr>
+        <tr><td>推理莫名其妙退出、无栈</td><td>并发训练抢资源 / MPS 偶发</td><td>停掉训练重跑；连续两次就换 CPU</td></tr>
+        <tr><td>换声出来很闷</td><td>把 48k 立体声降成 44.1k 单声道再混</td><td>全程 48k 立体声，最后再压</td></tr>
+        <tr><td>声音像机器人</td><td>语料是 TTS 合成音</td><td>换真人、带情绪的语料重新训，没有捷径</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="checklist">下次直接照着念的清单</h2>
+    <ol>
+      <li>拿 5～10 分钟干净、带情绪的单人干声，统一转 wav。</li>
+      <li><code>train/preprocess.py</code> 切片 → 检查 <code>0_gt_wavs / 2a_f0</code> 数量一致。</li>
+      <li><code>extract_hubert_feature.py</code> 提特征 → 确认 <code>3_feature768</code> 有文件。</li>
+      <li>写 <code>config.json</code>，生成 <code>filelist.txt</code>。</li>
+      <li><code>train.train</code> 先跑 32k 200 轮验证流程，再上 40k。</li>
+      <li><code>train_index.py</code> 建索引。</li>
+      <li><code>infer/cli.py</code> 换声，pitch 按性别差给，index-rate 0.7 左右。</li>
+      <li>升到 48k 立体声 → 人声 1.15×、伴奏 0.85 + 侧链 → loudnorm → 发文件。</li>
+    </ol>
+    <p>整套跑下来，第一次大概要耗掉一个下午；第二次照着清单，两小时内能拿到成品。真正花时间的从来不是敲命令，而是找一段值得训的声音。</p>
+  </article>
+
+  <nav class="toc" aria-label="目录">
+    <p>目录</p>
+    <ol>
+      <li><a href="#why">能干什么</a></li>
+      <li><a href="#hardware">硬件与时间</a></li>
+      <li><a href="#env">装环境</a></li>
+      <li><a href="#data">准备语料</a></li>
+      <li><a href="#preprocess">切片提特征</a></li>
+      <li><a href="#config">配置文件</a></li>
+      <li><a href="#train">开训</a></li>
+      <li><a href="#index">建索引</a></li>
+      <li><a href="#infer">换声</a></li>
+      <li><a href="#mix">混音</a></li>
+      <li><a href="#pits">踩过的坑</a></li>
+      <li><a href="#checklist">清单</a></li>
+    </ol>
+  </nav>
+</div>
+</body>
+</html>
