@@ -1,12 +1,47 @@
 {
-  "generated_at": "2026-11-03T18:43:23Z",
+  "generated_at": "2026-11-04T18:56:19Z",
   "window_days": 14,
   "owner": "hexinzxq",
   "totals": {
     "commits": 40,
-    "repos": 4
+    "repos": 3
   },
   "entries": [
+    {
+      "repo": "skillforge",
+      "message": "fix(frontend-design): count color(display-p3 ...) as a literal colour",
+      "short": "c64c0a0",
+      "date": "2026-11-04T13:31:01Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/c64c0a06b9cc27f5b4d21687a60a72e68654f299"
+    },
+    {
+      "repo": "skillforge",
+      "message": "fix(frontend-design): print one line per palette pair across sheets",
+      "short": "7f912f1",
+      "date": "2026-11-04T10:30:33Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/7f912f1bc1e124f7e76646bb8dd3ef771816e7d6"
+    },
+    {
+      "repo": "skillforge",
+      "message": "fix(frontend-design): a <base href> page resolves links off disk, not here",
+      "short": "d693f0c",
+      "date": "2026-11-04T05:30:41Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/d693f0ce998e844801b9c97af8a13887380e3009"
+    },
+    {
+      "repo": "skillforge",
+      "message": "feat(frontend-design): fail a local stylesheet a page links but cannot load",
+      "short": "cbdf3a7",
+      "date": "2026-11-04T04:33:18Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/cbdf3a7dc85550569bc4ce3615f9f300e10f186c"
+    },
+    {
+      "repo": "skillforge",
+      "message": "fix(frontend-design): say which linked stylesheets were skipped",
+      "short": "b9d8717",
+      "date": "2026-11-04T00:01:10Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/b9d8717e6df9d36bb3bb98ebe8c826c075ea7666"
+    },
     {
       "repo": "skillforge",
       "message": "fix(frontend-design): --strict --quiet must print what failed",
@@ -251,41 +286,6 @@
       "short": "4f4b917",
       "date": "2026-10-31T04:37:58Z",
       "url": "https://github.com/hexinzxq/skillforge/commit/4f4b9177eabd77df856d3f5ce308a34ee0e411a4"
-    },
-    {
-      "repo": "open-chat",
-      "message": "feat(web): switch models from the composer, with saved profiles",
-      "short": "6fe0031",
-      "date": "2026-10-31T02:35:40Z",
-      "url": "https://github.com/hexinzxq/open-chat/commit/6fe0031fc081097d41f94fb56efe3129952356c2"
-    },
-    {
-      "repo": "open-chat",
-      "message": "feat(web): rebuild the shell, not just the chat box",
-      "short": "f9c7032",
-      "date": "2026-10-31T02:30:34Z",
-      "url": "https://github.com/hexinzxq/open-chat/commit/f9c703239bd5b40eef4b55abe08cade547f22fd2"
-    },
-    {
-      "repo": "open-chat",
-      "message": "chore: run prettier over the rewritten web app",
-      "short": "4757b1d",
-      "date": "2026-10-31T02:18:44Z",
-      "url": "https://github.com/hexinzxq/open-chat/commit/4757b1dda67bd99692951e50ca9cefa9cfcc1cb3"
-    },
-    {
-      "repo": "open-chat",
-      "message": "style(web): give the user bubble a tint so it reads against the dark surface",
-      "short": "0e7356f",
-      "date": "2026-10-31T02:17:41Z",
-      "url": "https://github.com/hexinzxq/open-chat/commit/0e7356fd0d89fe8c22373118ae6427b730092566"
-    },
-    {
-      "repo": "open-chat",
-      "message": "feat(web): rebuild as a working chat UI with a static fallback",
-      "short": "4872126",
-      "date": "2026-10-31T02:13:56Z",
-      "url": "https://github.com/hexinzxq/open-chat/commit/48721263fb1188b051bb7278622c8b8dd339d124"
     }
   ]
 }
