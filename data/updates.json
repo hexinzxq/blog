@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T18:56:19Z",
+  "generated_at": "2026-11-05T19:08:13Z",
   "window_days": 14,
   "owner": "hexinzxq",
   "totals": {
@@ -7,6 +7,41 @@
     "repos": 3
   },
   "entries": [
+    {
+      "repo": "skillforge",
+      "message": "fix(frontend-design): keep the @media condition on a nested token block",
+      "short": "427b807",
+      "date": "2026-11-05T13:30:52Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/427b8077a24490019a099baf6c7327c5fadb091e"
+    },
+    {
+      "repo": "skillforge",
+      "message": "feat(frontend-design): treat panel and card as surfaces for text contrast",
+      "short": "0bb5a92",
+      "date": "2026-11-05T10:30:47Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/0bb5a920c77de3da3bc3ba0ce47b3ab824beb4a9"
+    },
+    {
+      "repo": "skillforge",
+      "message": "fix(frontend-design): a print target (@page) is not asked for a viewport",
+      "short": "08ca256",
+      "date": "2026-11-05T05:30:46Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/08ca256db4194d4f6c7997dbbeb2b5acdf83118c"
+    },
+    {
+      "repo": "skillforge",
+      "message": "feat(frontend-design): check focus-ring contrast at 3:1",
+      "short": "849e632",
+      "date": "2026-11-05T04:30:18Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/849e6329f3e4b0d75d303fa48b327dc8811e1249"
+    },
+    {
+      "repo": "skillforge",
+      "message": "fix(frontend-design): border contrast is advisory, not a failure",
+      "short": "dece07d",
+      "date": "2026-11-05T00:00:37Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/dece07dd76ef95010217a84bec6b95b69b2f6fb7"
+    },
     {
       "repo": "skillforge",
       "message": "fix(frontend-design): count color(display-p3 ...) as a literal colour",
@@ -251,41 +286,6 @@
       "short": "379eb22",
       "date": "2026-10-31T10:32:28Z",
       "url": "https://github.com/hexinzxq/dsh-agentledger/commit/379eb2242adf7e2689d0122dc184b83899719b3b"
-    },
-    {
-      "repo": "skillforge",
-      "message": "docs(frontend-design): move contrast mechanics into references/",
-      "short": "8bec262",
-      "date": "2026-10-31T10:31:29Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/8bec2628c338b3556e08eae56a03787eae2781b3"
-    },
-    {
-      "repo": "dsh-agentledger",
-      "message": "log: 2026-10-31 #5 skillforge dual-scope + -foreground",
-      "short": "dd257a5",
-      "date": "2026-10-31T05:39:58Z",
-      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/dd257a566306ebc13508fc170d70ba1faf492201"
-    },
-    {
-      "repo": "skillforge",
-      "message": "feat(frontend-design): scope-aware token reading and the shadcn -foreground convention",
-      "short": "718d7ab",
-      "date": "2026-10-31T05:39:33Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/718d7ab9b380c32a3c7e935f8791698d09f27952"
-    },
-    {
-      "repo": "dsh-agentledger",
-      "message": "log: skillforge iteration 4 (oklch parsing)",
-      "short": "f482ff6",
-      "date": "2026-10-31T04:38:06Z",
-      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/f482ff68859138050567039449096d5d4ce29714"
-    },
-    {
-      "repo": "skillforge",
-      "message": "feat(frontend-design): parse oklch/rgb/hsl token sheets, because modern palettes are not hex",
-      "short": "4f4b917",
-      "date": "2026-10-31T04:37:58Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/4f4b9177eabd77df856d3f5ce308a34ee0e411a4"
     }
   ]
 }
