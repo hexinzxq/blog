@@ -1,12 +1,47 @@
 {
-  "generated_at": "2026-11-05T19:08:13Z",
+  "generated_at": "2026-11-06T18:35:25Z",
   "window_days": 14,
   "owner": "hexinzxq",
   "totals": {
     "commits": 40,
-    "repos": 3
+    "repos": 2
   },
   "entries": [
+    {
+      "repo": "skillforge",
+      "message": "fix(frontend-design): flag a bare 100vw and report the right line",
+      "short": "fde1153",
+      "date": "2026-11-06T13:30:44Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/fde11535e33ee1dc621275328d9fb9b6469d751a"
+    },
+    {
+      "repo": "skillforge",
+      "message": "feat(frontend-design): ask a moving sheet for prefers-reduced-motion",
+      "short": "7dac43b",
+      "date": "2026-11-06T10:30:52Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/7dac43ba310127fb7ec2440983ee46fecae4b2be"
+    },
+    {
+      "repo": "skillforge",
+      "message": "feat(frontend-design): --exclude for a bundle you cannot edit",
+      "short": "aa79eb1",
+      "date": "2026-11-06T05:30:48Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/aa79eb115898e9392021306ab5355f03000c387a"
+    },
+    {
+      "repo": "skillforge",
+      "message": "feat(frontend-design): give findings a column on minified lines",
+      "short": "4f34e26",
+      "date": "2026-11-06T04:31:52Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/4f34e266b0db93da21ba8520877211d0a90d012a"
+    },
+    {
+      "repo": "skillforge",
+      "message": "fix(frontend-design): resolve root-relative stylesheets under the export root",
+      "short": "cc427de",
+      "date": "2026-11-06T00:00:29Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/cc427de6d8d9d7033aa82a5544db117fcf8e8f5f"
+    },
     {
       "repo": "skillforge",
       "message": "fix(frontend-design): keep the @media condition on a nested token block",
@@ -251,41 +286,6 @@
       "short": "b338e1f",
       "date": "2026-11-01T05:33:20Z",
       "url": "https://github.com/hexinzxq/dsh-agentledger/commit/b338e1fca9b824d34907bb70330d15ca9e8ce157"
-    },
-    {
-      "repo": "dsh-agentledger",
-      "message": "log: 2026-11-01 #1 skillforge sloplint",
-      "short": "0694a5a",
-      "date": "2026-11-01T05:32:55Z",
-      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/0694a5ab6f718f6f09dbdecc9b6f592003a3a6fc"
-    },
-    {
-      "repo": "skillforge",
-      "message": "feat(frontend-design): make the \"no AI tells\" checklist executable with sloplint",
-      "short": "683a857",
-      "date": "2026-11-01T05:31:56Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/683a857360afb9474c59d303e7810e856c03481a"
-    },
-    {
-      "repo": "growth",
-      "message": "docs: start the growth log with ten lessons already paid for",
-      "short": "3041128",
-      "date": "2026-11-01T03:52:10Z",
-      "url": "https://github.com/hexinzxq/growth/commit/3041128acb6b65181488bc601a958f18acc828ec"
-    },
-    {
-      "repo": "dsh-agentledger",
-      "message": "research: 2026-10-31 archive-only snapshot (gate: week_of is 1 day old)",
-      "short": "5dbcab4",
-      "date": "2026-10-31T12:02:35Z",
-      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/5dbcab4d46455c010440adb8e0e92e73654c5d6d"
-    },
-    {
-      "repo": "dsh-agentledger",
-      "message": "log: 2026-10-31 evening maintenance skillforge",
-      "short": "379eb22",
-      "date": "2026-10-31T10:32:28Z",
-      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/379eb2242adf7e2689d0122dc184b83899719b3b"
     }
   ]
 }
