@@ -1,12 +1,75 @@
 {
-  "generated_at": "2026-11-06T18:35:25Z",
+  "generated_at": "2026-11-07T17:02:33Z",
   "window_days": 14,
   "owner": "hexinzxq",
   "totals": {
     "commits": 40,
-    "repos": 2
+    "repos": 3
   },
   "entries": [
+    {
+      "repo": "skillforge",
+      "message": "feat(frontend-design): read tokens from a page's inline style block",
+      "short": "a0afcfd",
+      "date": "2026-11-07T13:30:45Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/a0afcfd821c11a196d2ccaf300dbf52d237177fd"
+    },
+    {
+      "repo": "dsh-agentledger",
+      "message": "week: switch to worktree-board (max-sixty/worktrunk angle) + research archive",
+      "short": "cf9ff68",
+      "date": "2026-11-07T12:06:53Z",
+      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/cf9ff68ff5320c1c9fd1b451bfdde77d971a85a8"
+    },
+    {
+      "repo": "worktree-board",
+      "message": "docs: the daily routine this repo will be grown by",
+      "short": "5105799",
+      "date": "2026-11-07T12:06:11Z",
+      "url": "https://github.com/hexinzxq/worktree-board/commit/510579975f9f5d30d32927c6b19f0593a22bbcf2"
+    },
+    {
+      "repo": "worktree-board",
+      "message": "polish: let the board pass its own linter (drop the eyebrow tell)",
+      "short": "809e09d",
+      "date": "2026-11-07T12:05:20Z",
+      "url": "https://github.com/hexinzxq/worktree-board/commit/809e09d4c000986973fe0d8688ce4f80a7bb5bd8"
+    },
+    {
+      "repo": "worktree-board",
+      "message": "scaffold: read-only worktree board (scan, stdlib server, wtree CLI)",
+      "short": "ecd96a1",
+      "date": "2026-11-07T12:04:14Z",
+      "url": "https://github.com/hexinzxq/worktree-board/commit/ecd96a1a64c93364544e7a5940a7fc2c527ee58e"
+    },
+    {
+      "repo": "skillforge",
+      "message": "feat(frontend-design): a page whose only headings are h2 has no outline top",
+      "short": "bb4c7ec",
+      "date": "2026-11-07T10:31:18Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/bb4c7ec3041395a10733f4ed38fc727dfa537caf"
+    },
+    {
+      "repo": "skillforge",
+      "message": "feat(frontend-design): check text on the second rung of the surface ladder",
+      "short": "cd1c474",
+      "date": "2026-11-07T05:30:51Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/cd1c4744755bbc93bb90b9a8b069289b086a6197"
+    },
+    {
+      "repo": "skillforge",
+      "message": "feat(frontend-design): a --line divider is a border under another name",
+      "short": "672aa11",
+      "date": "2026-11-07T04:32:02Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/672aa11571ef6e235d3a235cbd5250f6156be8c3"
+    },
+    {
+      "repo": "skillforge",
+      "message": "fix(frontend-design): point a literal colour at its own declaration",
+      "short": "5bcc9f0",
+      "date": "2026-11-07T00:00:51Z",
+      "url": "https://github.com/hexinzxq/skillforge/commit/5bcc9f074e2362c06c8e8b22b4862e0fe1a6d3e1"
+    },
     {
       "repo": "skillforge",
       "message": "fix(frontend-design): flag a bare 100vw and report the right line",
@@ -223,69 +286,6 @@
       "short": "1e36072",
       "date": "2026-11-02T00:01:47Z",
       "url": "https://github.com/hexinzxq/skillforge/commit/1e3607216d615b941d432b32144c6535c51d1f77"
-    },
-    {
-      "repo": "dsh-agentledger",
-      "message": "state: record pending push for next window",
-      "short": "3644928",
-      "date": "2026-11-01T14:46:25Z",
-      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/36449288afe92d891163ef6712797f02a4c2ff7d"
-    },
-    {
-      "repo": "dsh-agentledger",
-      "message": "log: 2026-11-01 #4 #5 + push blocked note",
-      "short": "e044cde",
-      "date": "2026-11-01T13:40:52Z",
-      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/e044cde5e51e3a50fe8f2dcf641a1fe0509e9a8a"
-    },
-    {
-      "repo": "skillforge",
-      "message": "test(validate): cover unreferenced support files and both mention forms",
-      "short": "303a4ab",
-      "date": "2026-11-01T13:38:56Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/303a4abbd91c69e9f8027a77e7b07f2f42c63d08"
-    },
-    {
-      "repo": "skillforge",
-      "message": "feat(validate): flag support files no line points at",
-      "short": "7b10c9f",
-      "date": "2026-11-01T13:38:38Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/7b10c9fe4eea6f528d81b805bec62295ffabc641"
-    },
-    {
-      "repo": "skillforge",
-      "message": "feat(frontend-design): catch dangling var() references and exempt fallbacks",
-      "short": "0d97ab1",
-      "date": "2026-11-01T13:38:26Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/0d97ab17a0769a8adb0d75aab6027f00b7a23ca9"
-    },
-    {
-      "repo": "dsh-agentledger",
-      "message": "log: 2026-11-01 #2 #3 skillforge",
-      "short": "324a24c",
-      "date": "2026-11-01T10:39:42Z",
-      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/324a24cf97392b6f26a6deb63d8b989ae79fec96"
-    },
-    {
-      "repo": "skillforge",
-      "message": "feat(frontend-design): --all-blocks checks every theme scope in one report",
-      "short": "0122b7d",
-      "date": "2026-11-01T10:36:22Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/0122b7d68babb3d58f4a9683a53487df66175ba0"
-    },
-    {
-      "repo": "skillforge",
-      "message": "fix(frontend-design): sloplint precision, measured on 2,000 lines of real CSS",
-      "short": "c01c256",
-      "date": "2026-11-01T10:31:40Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/c01c256dd9021ebcfbbbd69a0be2b24096ead0df"
-    },
-    {
-      "repo": "dsh-agentledger",
-      "message": "state: 2026-11-01 iteration 1",
-      "short": "b338e1f",
-      "date": "2026-11-01T05:33:20Z",
-      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/b338e1fca9b824d34907bb70330d15ca9e8ce157"
     }
   ]
 }
