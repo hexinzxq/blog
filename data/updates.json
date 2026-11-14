@@ -1,12 +1,243 @@
 {
-  "generated_at": "2026-11-13T18:50:51Z",
+  "generated_at": "2026-11-14T17:22:38Z",
   "window_days": 14,
   "owner": "hexinzxq",
   "totals": {
     "commits": 40,
-    "repos": 3
+    "repos": 4
   },
   "entries": [
+    {
+      "repo": "diffbrief",
+      "message": "fix: make the documented python -m diffbrief path work",
+      "short": "3a825fc",
+      "date": "2026-11-14T12:05:52Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/3a825fcf46db441a56f37b29b183706bde69ff82"
+    },
+    {
+      "repo": "dsh-agentledger",
+      "message": "week: switch to diffbrief (alibaba/open-code-review angle) + research archive",
+      "short": "2529678",
+      "date": "2026-11-14T12:04:53Z",
+      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/2529678930054812c202766e85c9000ce1e049be"
+    },
+    {
+      "repo": "diffbrief",
+      "message": "scaffold: read your unpushed diff before someone else does",
+      "short": "f86f427",
+      "date": "2026-11-14T12:03:43Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/f86f42754336f7c01eccd67747b9ed3acca64497"
+    },
+    {
+      "repo": "worktree-board",
+      "message": "fix(cli): refuse a non-repository before serve prints a URL",
+      "short": "38889f0",
+      "date": "2026-11-14T10:34:09Z",
+      "url": "https://github.com/hexinzxq/worktree-board/commit/38889f0d083c45504a24e8dad4b8751ae22df16c"
+    },
+    {
+      "repo": "worktree-board",
+      "message": "feat(scan): keep the reason a worktree was locked, not just the flag",
+      "short": "fa6920a",
+      "date": "2026-11-14T05:31:53Z",
+      "url": "https://github.com/hexinzxq/worktree-board/commit/fa6920aee296046b99d5f13df05a59263d438b5d"
+    },
+    {
+      "repo": "worktree-board",
+      "message": "fix(cli): flush the serve banner so a piped stdout still shows the URL",
+      "short": "014ac98",
+      "date": "2026-11-14T04:31:41Z",
+      "url": "https://github.com/hexinzxq/worktree-board/commit/014ac982b4b567ae01f0996d4648fbce70a408a0"
+    },
+    {
+      "repo": "worktree-board",
+      "message": "fix(cli): `*` marks the worktree you are in, not the main one",
+      "short": "ce8d156",
+      "date": "2026-11-14T00:01:41Z",
+      "url": "https://github.com/hexinzxq/worktree-board/commit/ce8d156f6fb75663be26207bfa6d188fed58714e"
+    },
+    {
+      "repo": "worktree-board",
+      "message": "fix(find): name the repositories git refused, don't drop them",
+      "short": "26d1e82",
+      "date": "2026-11-13T13:31:45Z",
+      "url": "https://github.com/hexinzxq/worktree-board/commit/26d1e82b15eb654bef19c1d4364de0d029e4ffad"
+    },
+    {
+      "repo": "worktree-board",
+      "message": "fix(scan): read worktree list as NUL records, and keep one row one line",
+      "short": "10557f0",
+      "date": "2026-11-13T10:31:43Z",
+      "url": "https://github.com/hexinzxq/worktree-board/commit/10557f0bfae4821be9c7bd29b3bd32ea1567f0ff"
+    },
+    {
+      "repo": "worktree-board",
+      "message": "feat(page): say how long ago, not which date",
+      "short": "c9a63c6",
+      "date": "2026-11-13T05:31:30Z",
+      "url": "https://github.com/hexinzxq/worktree-board/commit/c9a63c6f621e4625ac8634f025f54236da08c07f"
+    },
+    {
+      "repo": "worktree-board",
+      "message": "perf(server): one scan per ttl, shared by every polling tab",
+      "short": "7e1da09",
+      "date": "2026-11-13T04:30:42Z",
+      "url": "https://github.com/hexinzxq/worktree-board/commit/7e1da090713c575f81cf02c61e8a6b82d849795a"
+    },
+    {
+      "repo": "worktree-board",
+      "message": "fix(scan): a hung git call is a sentence, not a silent wait",
+      "short": "4294925",
+      "date": "2026-11-13T00:02:04Z",
+      "url": "https://github.com/hexinzxq/worktree-board/commit/42949252ae43430d6f1d02035584537960a81c01"
+    },
+    {
+      "repo": "worktree-board",
+      "message": "fix(find): `find -C .` from inside a worktree must see itself",
+      "short": "87774ee",
+      "date": "2026-11-12T13:32:23Z",
+      "url": "https://github.com/hexinzxq/worktree-board/commit/87774ee964c310c6753b56587bc613412e04dabd"
+    },
+    {
+      "repo": "worktree-board",
+      "message": "fix(sort): --sort age compares instants, not the ISO strings",
+      "short": "c4487b1",
+      "date": "2026-11-12T13:31:09Z",
+      "url": "https://github.com/hexinzxq/worktree-board/commit/c4487b1b2a245e83d4b72c25cb0eebb33f91e768"
+    },
+    {
+      "repo": "worktree-board",
+      "message": "fix: a path that does not exist is an error, not a traceback",
+      "short": "cf61894",
+      "date": "2026-11-12T12:01:00Z",
+      "url": "https://github.com/hexinzxq/worktree-board/commit/cf6189484419e274ca67bb197c262fbaa7717576"
+    },
+    {
+      "repo": "worktree-board",
+      "message": "fix: --json keeps the whole commit id",
+      "short": "772afba",
+      "date": "2026-11-12T05:30:53Z",
+      "url": "https://github.com/hexinzxq/worktree-board/commit/772afbacde05ebdbdefe2592a5269dabc8892fd4"
+    },
+    {
+      "repo": "worktree-board",
+      "message": "fix(scan): a prunable worktree still knows what it was doing",
+      "short": "88e86be",
+      "date": "2026-11-12T04:30:52Z",
+      "url": "https://github.com/hexinzxq/worktree-board/commit/88e86bebdfb8184ae05608997ab5af53954866ed"
+    },
+    {
+      "repo": "worktree-board",
+      "message": "feat: --sort age|dirty|behind|branch|path",
+      "short": "9e7aeb8",
+      "date": "2026-11-12T00:01:15Z",
+      "url": "https://github.com/hexinzxq/worktree-board/commit/9e7aeb845c3434349bff135f9e63dc1c4bca9c46"
+    },
+    {
+      "repo": "worktree-board",
+      "message": "feat(find): an empty survey says how many checkouts it examined",
+      "short": "2644f0f",
+      "date": "2026-11-11T13:31:01Z",
+      "url": "https://github.com/hexinzxq/worktree-board/commit/2644f0f5d1f1af5c5299afdb62d82b5347ee5ab7"
+    },
+    {
+      "repo": "worktree-board",
+      "message": "feat(find): say when the walk stopped instead of \"nothing found\"",
+      "short": "c4e4e2e",
+      "date": "2026-11-11T10:31:19Z",
+      "url": "https://github.com/hexinzxq/worktree-board/commit/c4e4e2ee65f6539b10dcff6c65873be1e3f3370e"
+    },
+    {
+      "repo": "worktree-board",
+      "message": "feat: `wtree find` surveys a directory for repositories with worktrees",
+      "short": "03f833c",
+      "date": "2026-11-11T05:31:15Z",
+      "url": "https://github.com/hexinzxq/worktree-board/commit/03f833c16d208e3967785b8c8a0228d1ceef8765"
+    },
+    {
+      "repo": "worktree-board",
+      "message": "test: keep the page in the wheel by testing the declaration",
+      "short": "2fffdb1",
+      "date": "2026-11-11T04:30:43Z",
+      "url": "https://github.com/hexinzxq/worktree-board/commit/2fffdb15371473d059f2587502b2064d489df014"
+    },
+    {
+      "repo": "worktree-board",
+      "message": "fix(server): explain a wheel that shipped without its page",
+      "short": "1dc47b2",
+      "date": "2026-11-11T00:00:52Z",
+      "url": "https://github.com/hexinzxq/worktree-board/commit/1dc47b2e7084bff0262316e0889dec753a257a5b"
+    },
+    {
+      "repo": "worktree-board",
+      "message": "fix: a detached worktree needs seven characters, not forty",
+      "short": "37eaf55",
+      "date": "2026-11-10T13:30:40Z",
+      "url": "https://github.com/hexinzxq/worktree-board/commit/37eaf55bc873f9043a73c991c31bffda5b0e4c8c"
+    },
+    {
+      "repo": "worktree-board",
+      "message": "feat(cli): say how old each last commit is",
+      "short": "bd14c5d",
+      "date": "2026-11-10T10:31:23Z",
+      "url": "https://github.com/hexinzxq/worktree-board/commit/bd14c5d15aeeaef3161dc4eda8be17ee498a530f"
+    },
+    {
+      "repo": "worktree-board",
+      "message": "fix(scan): a bare repository is a valid root and can own worktrees",
+      "short": "970c195",
+      "date": "2026-11-10T05:31:08Z",
+      "url": "https://github.com/hexinzxq/worktree-board/commit/970c195a5a5a01c6b0b0418c5cd441880adc16d5"
+    },
+    {
+      "repo": "worktree-board",
+      "message": "fix: the totals line must count the gone upstreams it shows",
+      "short": "a07c95f",
+      "date": "2026-11-10T04:30:40Z",
+      "url": "https://github.com/hexinzxq/worktree-board/commit/a07c95fadd99c73554a3ac3a43949a6ce9790cf4"
+    },
+    {
+      "repo": "worktree-board",
+      "message": "fix(cli): keep both ends of a long branch name",
+      "short": "09a7d25",
+      "date": "2026-11-10T00:00:52Z",
+      "url": "https://github.com/hexinzxq/worktree-board/commit/09a7d2518265a6565990c860ac7cb51596f2d34e"
+    },
+    {
+      "repo": "worktree-board",
+      "message": "fix(scan): name the kind of \"no\" and the missing upstream",
+      "short": "d518379",
+      "date": "2026-11-09T14:14:21Z",
+      "url": "https://github.com/hexinzxq/worktree-board/commit/d5183796349aa725ba783f334909d7708d4d74cc"
+    },
+    {
+      "repo": "worktree-board",
+      "message": "feat(board): the page explains which fetch the behind count is against",
+      "short": "5c7e666",
+      "date": "2026-11-09T10:30:54Z",
+      "url": "https://github.com/hexinzxq/worktree-board/commit/5c7e66630f420ff00db3510c4441640bd42775e7"
+    },
+    {
+      "repo": "worktree-board",
+      "message": "fix(cli): pad the table by terminal cells, not by characters",
+      "short": "c57c2d2",
+      "date": "2026-11-09T05:31:05Z",
+      "url": "https://github.com/hexinzxq/worktree-board/commit/c57c2d2955487b97f9dbe52ec2a9d416699e0df7"
+    },
+    {
+      "repo": "worktree-board",
+      "message": "docs: why the board has no worktree-to-session column yet",
+      "short": "896e0a2",
+      "date": "2026-11-09T04:31:17Z",
+      "url": "https://github.com/hexinzxq/worktree-board/commit/896e0a218ad9650b7976c0e324f8163fb17fea1a"
+    },
+    {
+      "repo": "worktree-board",
+      "message": "feat(scan): say when the behind count was measured",
+      "short": "3a8f55d",
+      "date": "2026-11-08T13:31:13Z",
+      "url": "https://github.com/hexinzxq/worktree-board/commit/3a8f55daec0e67bb2bda843c00cccb4ab96782cb"
+    },
     {
       "repo": "skillforge",
       "message": "feat(frontend-design): read tokens from a page's inline style block",
@@ -20,27 +251,6 @@
       "short": "cf9ff68",
       "date": "2026-11-07T12:06:53Z",
       "url": "https://github.com/hexinzxq/dsh-agentledger/commit/cf9ff68ff5320c1c9fd1b451bfdde77d971a85a8"
-    },
-    {
-      "repo": "worktree-board",
-      "message": "docs: the daily routine this repo will be grown by",
-      "short": "5105799",
-      "date": "2026-11-07T12:06:11Z",
-      "url": "https://github.com/hexinzxq/worktree-board/commit/510579975f9f5d30d32927c6b19f0593a22bbcf2"
-    },
-    {
-      "repo": "worktree-board",
-      "message": "polish: let the board pass its own linter (drop the eyebrow tell)",
-      "short": "809e09d",
-      "date": "2026-11-07T12:05:20Z",
-      "url": "https://github.com/hexinzxq/worktree-board/commit/809e09d4c000986973fe0d8688ce4f80a7bb5bd8"
-    },
-    {
-      "repo": "worktree-board",
-      "message": "scaffold: read-only worktree board (scan, stdlib server, wtree CLI)",
-      "short": "ecd96a1",
-      "date": "2026-11-07T12:04:14Z",
-      "url": "https://github.com/hexinzxq/worktree-board/commit/ecd96a1a64c93364544e7a5940a7fc2c527ee58e"
     },
     {
       "repo": "skillforge",
@@ -76,216 +286,6 @@
       "short": "fde1153",
       "date": "2026-11-06T13:30:44Z",
       "url": "https://github.com/hexinzxq/skillforge/commit/fde11535e33ee1dc621275328d9fb9b6469d751a"
-    },
-    {
-      "repo": "skillforge",
-      "message": "feat(frontend-design): ask a moving sheet for prefers-reduced-motion",
-      "short": "7dac43b",
-      "date": "2026-11-06T10:30:52Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/7dac43ba310127fb7ec2440983ee46fecae4b2be"
-    },
-    {
-      "repo": "skillforge",
-      "message": "feat(frontend-design): --exclude for a bundle you cannot edit",
-      "short": "aa79eb1",
-      "date": "2026-11-06T05:30:48Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/aa79eb115898e9392021306ab5355f03000c387a"
-    },
-    {
-      "repo": "skillforge",
-      "message": "feat(frontend-design): give findings a column on minified lines",
-      "short": "4f34e26",
-      "date": "2026-11-06T04:31:52Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/4f34e266b0db93da21ba8520877211d0a90d012a"
-    },
-    {
-      "repo": "skillforge",
-      "message": "fix(frontend-design): resolve root-relative stylesheets under the export root",
-      "short": "cc427de",
-      "date": "2026-11-06T00:00:29Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/cc427de6d8d9d7033aa82a5544db117fcf8e8f5f"
-    },
-    {
-      "repo": "skillforge",
-      "message": "fix(frontend-design): keep the @media condition on a nested token block",
-      "short": "427b807",
-      "date": "2026-11-05T13:30:52Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/427b8077a24490019a099baf6c7327c5fadb091e"
-    },
-    {
-      "repo": "skillforge",
-      "message": "feat(frontend-design): treat panel and card as surfaces for text contrast",
-      "short": "0bb5a92",
-      "date": "2026-11-05T10:30:47Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/0bb5a920c77de3da3bc3ba0ce47b3ab824beb4a9"
-    },
-    {
-      "repo": "skillforge",
-      "message": "fix(frontend-design): a print target (@page) is not asked for a viewport",
-      "short": "08ca256",
-      "date": "2026-11-05T05:30:46Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/08ca256db4194d4f6c7997dbbeb2b5acdf83118c"
-    },
-    {
-      "repo": "skillforge",
-      "message": "feat(frontend-design): check focus-ring contrast at 3:1",
-      "short": "849e632",
-      "date": "2026-11-05T04:30:18Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/849e6329f3e4b0d75d303fa48b327dc8811e1249"
-    },
-    {
-      "repo": "skillforge",
-      "message": "fix(frontend-design): border contrast is advisory, not a failure",
-      "short": "dece07d",
-      "date": "2026-11-05T00:00:37Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/dece07dd76ef95010217a84bec6b95b69b2f6fb7"
-    },
-    {
-      "repo": "skillforge",
-      "message": "fix(frontend-design): count color(display-p3 ...) as a literal colour",
-      "short": "c64c0a0",
-      "date": "2026-11-04T13:31:01Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/c64c0a06b9cc27f5b4d21687a60a72e68654f299"
-    },
-    {
-      "repo": "skillforge",
-      "message": "fix(frontend-design): print one line per palette pair across sheets",
-      "short": "7f912f1",
-      "date": "2026-11-04T10:30:33Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/7f912f1bc1e124f7e76646bb8dd3ef771816e7d6"
-    },
-    {
-      "repo": "skillforge",
-      "message": "fix(frontend-design): a <base href> page resolves links off disk, not here",
-      "short": "d693f0c",
-      "date": "2026-11-04T05:30:41Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/d693f0ce998e844801b9c97af8a13887380e3009"
-    },
-    {
-      "repo": "skillforge",
-      "message": "feat(frontend-design): fail a local stylesheet a page links but cannot load",
-      "short": "cbdf3a7",
-      "date": "2026-11-04T04:33:18Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/cbdf3a7dc85550569bc4ce3615f9f300e10f186c"
-    },
-    {
-      "repo": "skillforge",
-      "message": "fix(frontend-design): say which linked stylesheets were skipped",
-      "short": "b9d8717",
-      "date": "2026-11-04T00:01:10Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/b9d8717e6df9d36bb3bb98ebe8c826c075ea7666"
-    },
-    {
-      "repo": "skillforge",
-      "message": "fix(frontend-design): --strict --quiet must print what failed",
-      "short": "33794c2",
-      "date": "2026-11-03T13:34:29Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/33794c22bad3d03f61ebfda6284f845fa105be03"
-    },
-    {
-      "repo": "skillforge",
-      "message": "fix(frontend-design): read no-focus-replacement across the whole scan",
-      "short": "6919044",
-      "date": "2026-11-03T13:34:10Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/6919044662eae6543a45336aa2798b02499d6bfb"
-    },
-    {
-      "repo": "skillforge",
-      "message": "feat(frontend-design): fail a viewport that forbids pinch-zoom",
-      "short": "6b482f3",
-      "date": "2026-11-03T13:33:28Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/6b482f34baea99790c8771d99d159b8426d13bdb"
-    },
-    {
-      "repo": "skillforge",
-      "message": "feat(frontend-design): fail a full page that has no viewport meta",
-      "short": "650c051",
-      "date": "2026-11-03T13:32:55Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/650c051c91acbcfe53431291888f62053ef7b4a8"
-    },
-    {
-      "repo": "skillforge",
-      "message": "fix(frontend-design): see 100vh through calc() and max-height",
-      "short": "55cf3aa",
-      "date": "2026-11-03T13:32:03Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/55cf3aa9b30eb291d27442f5650d0f57b82db3e3"
-    },
-    {
-      "repo": "dsh-agentledger",
-      "message": "log: 2026-11-02 #5 installer vendor discovery",
-      "short": "322ec60",
-      "date": "2026-11-02T10:31:43Z",
-      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/322ec609d7bd27a5b0f8bcc038dbd5dc5479a6c3"
-    },
-    {
-      "repo": "skillforge",
-      "message": "fix(install): discover the 61 vendored skills, at three different depths",
-      "short": "23ed35b",
-      "date": "2026-11-02T10:31:32Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/23ed35bc2e6a66f08c927f9c4fe0ab4bfa85fe2c"
-    },
-    {
-      "repo": "dsh-agentledger",
-      "message": "log: 2026-11-02 #4 all-blocks cascade",
-      "short": "9be9fd5",
-      "date": "2026-11-02T05:31:37Z",
-      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/9be9fd5cb933ee5726a5d4c754d7d851ab4c1322"
-    },
-    {
-      "repo": "skillforge",
-      "message": "fix(frontend-design): read --all-blocks as one cascade, not N isolated blocks",
-      "short": "245e20e",
-      "date": "2026-11-02T05:31:32Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/245e20e1b49d265a21c0732bff46f1d6081d5e2f"
-    },
-    {
-      "repo": "dsh-agentledger",
-      "message": "log: 2026-11-02 #3 color-mix/light-dark resolution",
-      "short": "2a039fd",
-      "date": "2026-11-02T04:33:02Z",
-      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/2a039fd7f58d982141d275796be317e7486cddae"
-    },
-    {
-      "repo": "skillforge",
-      "message": "feat(frontend-design): resolve color-mix(), var() chains and light-dark()",
-      "short": "5f8b9eb",
-      "date": "2026-11-02T04:32:57Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/5f8b9eb03023cd96c3a8005cfa80f56b106e00c4"
-    },
-    {
-      "repo": "dsh-agentledger",
-      "message": "log: 2026-11-02 #2 dangling-var typo-only",
-      "short": "1297466",
-      "date": "2026-11-02T00:03:00Z",
-      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/1297466f14e60293bf92172b5bda279029235bab"
-    },
-    {
-      "repo": "skillforge",
-      "message": "fix(frontend-design): only flag var() names that look like typos",
-      "short": "f0bfa15",
-      "date": "2026-11-02T00:02:55Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/f0bfa15e8989f89af6330239853980eadfa188db"
-    },
-    {
-      "repo": "dsh-agentledger",
-      "message": "log: fix duplicate counter for 2026-11-02 #1",
-      "short": "6632091",
-      "date": "2026-11-02T00:02:00Z",
-      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/663209139e9b2a88a1219c6b2cceaac2d1cabac6"
-    },
-    {
-      "repo": "dsh-agentledger",
-      "message": "log: 2026-11-02 #1 sloplint follows linked stylesheets; clear pending_push",
-      "short": "c19caa8",
-      "date": "2026-11-02T00:01:52Z",
-      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/c19caa8b86a3a56a2f70a138ff1f7cde09255b9d"
-    },
-    {
-      "repo": "skillforge",
-      "message": "feat(frontend-design): sloplint follows a page's local stylesheets",
-      "short": "1e36072",
-      "date": "2026-11-02T00:01:47Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/1e3607216d615b941d432b32144c6535c51d1f77"
     }
   ]
 }
