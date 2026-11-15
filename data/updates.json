@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T17:22:38Z",
+  "generated_at": "2026-11-15T18:03:46Z",
   "window_days": 14,
   "owner": "hexinzxq",
   "totals": {
@@ -7,6 +7,41 @@
     "repos": 4
   },
   "entries": [
+    {
+      "repo": "diffbrief",
+      "message": "fix: debug output only counts in a file that can run",
+      "short": "7e6e133",
+      "date": "2026-11-15T13:30:30Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/7e6e133180fcea2959446de50fe3fbb92d17e8f2"
+    },
+    {
+      "repo": "diffbrief",
+      "message": "feat: --install-hook, and read origin/<branch> when there is no upstream",
+      "short": "6241f8a",
+      "date": "2026-11-15T10:31:58Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/6241f8a03b654a7cf274fa709ba5de3cde9d9908"
+    },
+    {
+      "repo": "diffbrief",
+      "message": "fix: a TODO in data is not a TODO entering the tree",
+      "short": "57f0259",
+      "date": "2026-11-15T05:30:31Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/57f0259185acfdab18680efa972187b9d17a293d"
+    },
+    {
+      "repo": "diffbrief",
+      "message": "feat: --exclude for a vendored tree you cannot edit",
+      "short": "75f0758",
+      "date": "2026-11-15T04:31:22Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/75f0758742a69d5e78a0a10f1b86ff6b3fe7151c"
+    },
+    {
+      "repo": "diffbrief",
+      "message": "fix: --staged reads the index, so say that instead of HEAD",
+      "short": "8f44a1d",
+      "date": "2026-11-15T00:00:33Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/8f44a1df2d0750415216c825fd9933b68b68f2a2"
+    },
     {
       "repo": "diffbrief",
       "message": "fix: make the documented python -m diffbrief path work",
@@ -251,41 +286,6 @@
       "short": "cf9ff68",
       "date": "2026-11-07T12:06:53Z",
       "url": "https://github.com/hexinzxq/dsh-agentledger/commit/cf9ff68ff5320c1c9fd1b451bfdde77d971a85a8"
-    },
-    {
-      "repo": "skillforge",
-      "message": "feat(frontend-design): a page whose only headings are h2 has no outline top",
-      "short": "bb4c7ec",
-      "date": "2026-11-07T10:31:18Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/bb4c7ec3041395a10733f4ed38fc727dfa537caf"
-    },
-    {
-      "repo": "skillforge",
-      "message": "feat(frontend-design): check text on the second rung of the surface ladder",
-      "short": "cd1c474",
-      "date": "2026-11-07T05:30:51Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/cd1c4744755bbc93bb90b9a8b069289b086a6197"
-    },
-    {
-      "repo": "skillforge",
-      "message": "feat(frontend-design): a --line divider is a border under another name",
-      "short": "672aa11",
-      "date": "2026-11-07T04:32:02Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/672aa11571ef6e235d3a235cbd5250f6156be8c3"
-    },
-    {
-      "repo": "skillforge",
-      "message": "fix(frontend-design): point a literal colour at its own declaration",
-      "short": "5bcc9f0",
-      "date": "2026-11-07T00:00:51Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/5bcc9f074e2362c06c8e8b22b4862e0fe1a6d3e1"
-    },
-    {
-      "repo": "skillforge",
-      "message": "fix(frontend-design): flag a bare 100vw and report the right line",
-      "short": "fde1153",
-      "date": "2026-11-06T13:30:44Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/fde11535e33ee1dc621275328d9fb9b6469d751a"
     }
   ]
 }
