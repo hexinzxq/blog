@@ -1,12 +1,47 @@
 {
-  "generated_at": "2026-11-15T18:03:46Z",
+  "generated_at": "2026-11-16T21:19:11Z",
   "window_days": 14,
   "owner": "hexinzxq",
   "totals": {
     "commits": 40,
-    "repos": 4
+    "repos": 3
   },
   "entries": [
+    {
+      "repo": "diffbrief",
+      "message": "fix: a template value is not a leaked key",
+      "short": "14d231c",
+      "date": "2026-11-16T13:30:51Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/14d231cdbcb598172bc56233870cb4d959fbd6d6"
+    },
+    {
+      "repo": "diffbrief",
+      "message": "fix: a branch that was never pushed reads against origin/HEAD",
+      "short": "59a1c66",
+      "date": "2026-11-16T10:30:51Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/59a1c669218bcdd20252dd9b6c392dc70b971e37"
+    },
+    {
+      "repo": "diffbrief",
+      "message": "fix: rewrite a stale hook of our own instead of saying it is there",
+      "short": "b8afea3",
+      "date": "2026-11-16T05:31:05Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/b8afea369e8d57033c9ed55480dca0bdc181c98f"
+    },
+    {
+      "repo": "diffbrief",
+      "message": "fix: a hook checks the commits, not the untouched working copy",
+      "short": "cf8162e",
+      "date": "2026-11-16T04:31:14Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/cf8162ef1cd9a8bf42da1c678c94f723fc000f0e"
+    },
+    {
+      "repo": "diffbrief",
+      "message": "fix: a rename moves no line, so it asks for no test",
+      "short": "975a67a",
+      "date": "2026-11-16T00:01:18Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/975a67a3bb86c368a296d6c2a5543e339fd913b8"
+    },
     {
       "repo": "diffbrief",
       "message": "fix: debug output only counts in a file that can run",
@@ -251,41 +286,6 @@
       "short": "5c7e666",
       "date": "2026-11-09T10:30:54Z",
       "url": "https://github.com/hexinzxq/worktree-board/commit/5c7e66630f420ff00db3510c4441640bd42775e7"
-    },
-    {
-      "repo": "worktree-board",
-      "message": "fix(cli): pad the table by terminal cells, not by characters",
-      "short": "c57c2d2",
-      "date": "2026-11-09T05:31:05Z",
-      "url": "https://github.com/hexinzxq/worktree-board/commit/c57c2d2955487b97f9dbe52ec2a9d416699e0df7"
-    },
-    {
-      "repo": "worktree-board",
-      "message": "docs: why the board has no worktree-to-session column yet",
-      "short": "896e0a2",
-      "date": "2026-11-09T04:31:17Z",
-      "url": "https://github.com/hexinzxq/worktree-board/commit/896e0a218ad9650b7976c0e324f8163fb17fea1a"
-    },
-    {
-      "repo": "worktree-board",
-      "message": "feat(scan): say when the behind count was measured",
-      "short": "3a8f55d",
-      "date": "2026-11-08T13:31:13Z",
-      "url": "https://github.com/hexinzxq/worktree-board/commit/3a8f55daec0e67bb2bda843c00cccb4ab96782cb"
-    },
-    {
-      "repo": "skillforge",
-      "message": "feat(frontend-design): read tokens from a page's inline style block",
-      "short": "a0afcfd",
-      "date": "2026-11-07T13:30:45Z",
-      "url": "https://github.com/hexinzxq/skillforge/commit/a0afcfd821c11a196d2ccaf300dbf52d237177fd"
-    },
-    {
-      "repo": "dsh-agentledger",
-      "message": "week: switch to worktree-board (max-sixty/worktrunk angle) + research archive",
-      "short": "cf9ff68",
-      "date": "2026-11-07T12:06:53Z",
-      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/cf9ff68ff5320c1c9fd1b451bfdde77d971a85a8"
     }
   ]
 }
