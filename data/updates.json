@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T21:19:11Z",
+  "generated_at": "2026-11-17T20:07:48Z",
   "window_days": 14,
   "owner": "hexinzxq",
   "totals": {
@@ -7,6 +7,41 @@
     "repos": 3
   },
   "entries": [
+    {
+      "repo": "diffbrief",
+      "message": "fix: --staged and --committed cannot be asked for at once",
+      "short": "accf822",
+      "date": "2026-11-17T13:30:21Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/accf822f8bf1846af43e2ae6d7f881878be439a9"
+    },
+    {
+      "repo": "diffbrief",
+      "message": "feat: the page says how many files --exclude skipped",
+      "short": "90952c4",
+      "date": "2026-11-17T10:30:32Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/90952c452322fe72fb46606c3bb16ef76f29b605"
+    },
+    {
+      "repo": "diffbrief",
+      "message": "fix: tests-missing says when --exclude hid the tests",
+      "short": "1eea6f8",
+      "date": "2026-11-17T05:30:44Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/1eea6f8fac57b542c4563a8f23abeb6c42686496"
+    },
+    {
+      "repo": "diffbrief",
+      "message": "fix: serve passes --exclude and --committed through to the page",
+      "short": "e359e2b",
+      "date": "2026-11-17T04:30:38Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/e359e2beaf80aff9a449ce35fa528d86c4a3b632"
+    },
+    {
+      "repo": "diffbrief",
+      "message": "fix: print a non-ASCII path the way it is on disk",
+      "short": "26a322d",
+      "date": "2026-11-17T00:00:26Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/26a322d1caa7f55211632ee049bec99f686d1d59"
+    },
     {
       "repo": "diffbrief",
       "message": "fix: a template value is not a leaked key",
@@ -251,41 +286,6 @@
       "short": "bd14c5d",
       "date": "2026-11-10T10:31:23Z",
       "url": "https://github.com/hexinzxq/worktree-board/commit/bd14c5d15aeeaef3161dc4eda8be17ee498a530f"
-    },
-    {
-      "repo": "worktree-board",
-      "message": "fix(scan): a bare repository is a valid root and can own worktrees",
-      "short": "970c195",
-      "date": "2026-11-10T05:31:08Z",
-      "url": "https://github.com/hexinzxq/worktree-board/commit/970c195a5a5a01c6b0b0418c5cd441880adc16d5"
-    },
-    {
-      "repo": "worktree-board",
-      "message": "fix: the totals line must count the gone upstreams it shows",
-      "short": "a07c95f",
-      "date": "2026-11-10T04:30:40Z",
-      "url": "https://github.com/hexinzxq/worktree-board/commit/a07c95fadd99c73554a3ac3a43949a6ce9790cf4"
-    },
-    {
-      "repo": "worktree-board",
-      "message": "fix(cli): keep both ends of a long branch name",
-      "short": "09a7d25",
-      "date": "2026-11-10T00:00:52Z",
-      "url": "https://github.com/hexinzxq/worktree-board/commit/09a7d2518265a6565990c860ac7cb51596f2d34e"
-    },
-    {
-      "repo": "worktree-board",
-      "message": "fix(scan): name the kind of \"no\" and the missing upstream",
-      "short": "d518379",
-      "date": "2026-11-09T14:14:21Z",
-      "url": "https://github.com/hexinzxq/worktree-board/commit/d5183796349aa725ba783f334909d7708d4d74cc"
-    },
-    {
-      "repo": "worktree-board",
-      "message": "feat(board): the page explains which fetch the behind count is against",
-      "short": "5c7e666",
-      "date": "2026-11-09T10:30:54Z",
-      "url": "https://github.com/hexinzxq/worktree-board/commit/5c7e66630f420ff00db3510c4441640bd42775e7"
     }
   ]
 }
