@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T20:07:48Z",
+  "generated_at": "2026-11-18T19:40:04Z",
   "window_days": 14,
   "owner": "hexinzxq",
   "totals": {
@@ -7,6 +7,41 @@
     "repos": 3
   },
   "entries": [
+    {
+      "repo": "diffbrief",
+      "message": "fix: a first push is read against the empty tree, not HEAD",
+      "short": "a7fb0e0",
+      "date": "2026-11-18T13:32:31Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/a7fb0e05366d829d02c87868fc451a179df6d46b"
+    },
+    {
+      "repo": "diffbrief",
+      "message": "feat: bake --exclude into the installed hook",
+      "short": "b82c6b1",
+      "date": "2026-11-18T10:31:04Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/b82c6b1a7e107fe27786b5b706999763c25387a6"
+    },
+    {
+      "repo": "diffbrief",
+      "message": "feat: catch a bare secret in a yaml/ini/properties file",
+      "short": "6f0f83c",
+      "date": "2026-11-18T05:30:56Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/6f0f83c7fcbdb1e1ed6617a69ce346773942b2cf"
+    },
+    {
+      "repo": "diffbrief",
+      "message": "fix: app/tests.py is the test file, not a source file",
+      "short": "57c4419",
+      "date": "2026-11-18T04:30:29Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/57c4419aee4e2fffb921bfcb587b8dc7c1c92406"
+    },
+    {
+      "repo": "diffbrief",
+      "message": "fix: a template config is not asked for a test",
+      "short": "0966396",
+      "date": "2026-11-18T00:00:42Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/0966396c673addf8bbb545fb2d9ce25c2ad09385"
+    },
     {
       "repo": "diffbrief",
       "message": "fix: --staged and --committed cannot be asked for at once",
@@ -251,41 +286,6 @@
       "short": "c4e4e2e",
       "date": "2026-11-11T10:31:19Z",
       "url": "https://github.com/hexinzxq/worktree-board/commit/c4e4e2ee65f6539b10dcff6c65873be1e3f3370e"
-    },
-    {
-      "repo": "worktree-board",
-      "message": "feat: `wtree find` surveys a directory for repositories with worktrees",
-      "short": "03f833c",
-      "date": "2026-11-11T05:31:15Z",
-      "url": "https://github.com/hexinzxq/worktree-board/commit/03f833c16d208e3967785b8c8a0228d1ceef8765"
-    },
-    {
-      "repo": "worktree-board",
-      "message": "test: keep the page in the wheel by testing the declaration",
-      "short": "2fffdb1",
-      "date": "2026-11-11T04:30:43Z",
-      "url": "https://github.com/hexinzxq/worktree-board/commit/2fffdb15371473d059f2587502b2064d489df014"
-    },
-    {
-      "repo": "worktree-board",
-      "message": "fix(server): explain a wheel that shipped without its page",
-      "short": "1dc47b2",
-      "date": "2026-11-11T00:00:52Z",
-      "url": "https://github.com/hexinzxq/worktree-board/commit/1dc47b2e7084bff0262316e0889dec753a257a5b"
-    },
-    {
-      "repo": "worktree-board",
-      "message": "fix: a detached worktree needs seven characters, not forty",
-      "short": "37eaf55",
-      "date": "2026-11-10T13:30:40Z",
-      "url": "https://github.com/hexinzxq/worktree-board/commit/37eaf55bc873f9043a73c991c31bffda5b0e4c8c"
-    },
-    {
-      "repo": "worktree-board",
-      "message": "feat(cli): say how old each last commit is",
-      "short": "bd14c5d",
-      "date": "2026-11-10T10:31:23Z",
-      "url": "https://github.com/hexinzxq/worktree-board/commit/bd14c5d15aeeaef3161dc4eda8be17ee498a530f"
     }
   ]
 }
