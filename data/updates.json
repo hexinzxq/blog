@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T19:40:04Z",
+  "generated_at": "2026-11-19T19:40:19Z",
   "window_days": 14,
   "owner": "hexinzxq",
   "totals": {
@@ -7,6 +7,41 @@
     "repos": 3
   },
   "entries": [
+    {
+      "repo": "diffbrief",
+      "message": "fix: say when the change is outside the view you asked for",
+      "short": "27382ba",
+      "date": "2026-11-19T13:31:01Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/27382bad5405c1c9700e20d561c0e4495f890ad7"
+    },
+    {
+      "repo": "diffbrief",
+      "message": "fix: --json stays JSON when the read fails",
+      "short": "41a819a",
+      "date": "2026-11-19T10:30:34Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/41a819ac7e20dbfe16d0adf943ae9c3df832070e"
+    },
+    {
+      "repo": "diffbrief",
+      "message": "fix: a --path read says it was scoped",
+      "short": "dd66977",
+      "date": "2026-11-19T05:30:31Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/dd66977124500c4ac1bd7c3e26c29131be2626cf"
+    },
+    {
+      "repo": "diffbrief",
+      "message": "fix: a repository with no commits gets a sentence, not git's fatal",
+      "short": "69079b5",
+      "date": "2026-11-19T04:30:40Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/69079b566b2c08c3dccca18ebd79d393f843e9b9"
+    },
+    {
+      "repo": "diffbrief",
+      "message": "feat: --path, so a monorepo can read only its own package",
+      "short": "034e3fb",
+      "date": "2026-11-19T00:02:03Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/034e3fb7d07a8d9ada3813ba009542c85b37c59c"
+    },
     {
       "repo": "diffbrief",
       "message": "fix: a first push is read against the empty tree, not HEAD",
@@ -251,41 +286,6 @@
       "short": "cf61894",
       "date": "2026-11-12T12:01:00Z",
       "url": "https://github.com/hexinzxq/worktree-board/commit/cf6189484419e274ca67bb197c262fbaa7717576"
-    },
-    {
-      "repo": "worktree-board",
-      "message": "fix: --json keeps the whole commit id",
-      "short": "772afba",
-      "date": "2026-11-12T05:30:53Z",
-      "url": "https://github.com/hexinzxq/worktree-board/commit/772afbacde05ebdbdefe2592a5269dabc8892fd4"
-    },
-    {
-      "repo": "worktree-board",
-      "message": "fix(scan): a prunable worktree still knows what it was doing",
-      "short": "88e86be",
-      "date": "2026-11-12T04:30:52Z",
-      "url": "https://github.com/hexinzxq/worktree-board/commit/88e86bebdfb8184ae05608997ab5af53954866ed"
-    },
-    {
-      "repo": "worktree-board",
-      "message": "feat: --sort age|dirty|behind|branch|path",
-      "short": "9e7aeb8",
-      "date": "2026-11-12T00:01:15Z",
-      "url": "https://github.com/hexinzxq/worktree-board/commit/9e7aeb845c3434349bff135f9e63dc1c4bca9c46"
-    },
-    {
-      "repo": "worktree-board",
-      "message": "feat(find): an empty survey says how many checkouts it examined",
-      "short": "2644f0f",
-      "date": "2026-11-11T13:31:01Z",
-      "url": "https://github.com/hexinzxq/worktree-board/commit/2644f0f5d1f1af5c5299afdb62d82b5347ee5ab7"
-    },
-    {
-      "repo": "worktree-board",
-      "message": "feat(find): say when the walk stopped instead of \"nothing found\"",
-      "short": "c4e4e2e",
-      "date": "2026-11-11T10:31:19Z",
-      "url": "https://github.com/hexinzxq/worktree-board/commit/c4e4e2ee65f6539b10dcff6c65873be1e3f3370e"
     }
   ]
 }
