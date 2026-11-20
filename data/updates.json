@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T19:40:19Z",
+  "generated_at": "2026-11-20T19:18:55Z",
   "window_days": 14,
   "owner": "hexinzxq",
   "totals": {
@@ -7,6 +7,55 @@
     "repos": 3
   },
   "entries": [
+    {
+      "repo": "diffbrief",
+      "message": "fix: read findings top to bottom per file",
+      "short": "6d85eb4",
+      "date": "2026-11-20T13:30:54Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/6d85eb4489136169c40156142084fedaa4716e72"
+    },
+    {
+      "repo": "diffbrief",
+      "message": "fix: name an --exclude glob that matched nothing",
+      "short": "63eb304",
+      "date": "2026-11-20T10:32:22Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/63eb30443d9e6251bf8369cff4e07a2af1944efd"
+    },
+    {
+      "repo": "diffbrief",
+      "message": "docs: split the --path line and say what the hook bakes in",
+      "short": "05369e4",
+      "date": "2026-11-20T05:31:18Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/05369e49c8b393fd4e4c1297164ca75a271c3768"
+    },
+    {
+      "repo": "diffbrief",
+      "message": "feat: bake --path into the installed hook too",
+      "short": "398f2d4",
+      "date": "2026-11-20T05:30:41Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/398f2d4f0c62b5c81cd82ac80d4fe998c02b0aa6"
+    },
+    {
+      "repo": "diffbrief",
+      "message": "docs: say the page polls every 5s again",
+      "short": "9e6e99d",
+      "date": "2026-11-20T04:30:50Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/9e6e99ddc3c5cab90367fac35207f74f8b4e1bf3"
+    },
+    {
+      "repo": "diffbrief",
+      "message": "feat(page): show binaries not read and the --path scope",
+      "short": "c240af5",
+      "date": "2026-11-20T04:30:36Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/c240af5985524a7084a18e28804492c1c53f3870"
+    },
+    {
+      "repo": "diffbrief",
+      "message": "fix: name the binary files the tool could not read",
+      "short": "1060c01",
+      "date": "2026-11-20T00:01:34Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/1060c01478746438273fb8d57046c5345583fa78"
+    },
     {
       "repo": "diffbrief",
       "message": "fix: say when the change is outside the view you asked for",
@@ -169,39 +218,11 @@
       "url": "https://github.com/hexinzxq/diffbrief/commit/57f0259185acfdab18680efa972187b9d17a293d"
     },
     {
-      "repo": "diffbrief",
-      "message": "feat: --exclude for a vendored tree you cannot edit",
-      "short": "75f0758",
-      "date": "2026-11-15T04:31:22Z",
-      "url": "https://github.com/hexinzxq/diffbrief/commit/75f0758742a69d5e78a0a10f1b86ff6b3fe7151c"
-    },
-    {
-      "repo": "diffbrief",
-      "message": "fix: --staged reads the index, so say that instead of HEAD",
-      "short": "8f44a1d",
-      "date": "2026-11-15T00:00:33Z",
-      "url": "https://github.com/hexinzxq/diffbrief/commit/8f44a1df2d0750415216c825fd9933b68b68f2a2"
-    },
-    {
-      "repo": "diffbrief",
-      "message": "fix: make the documented python -m diffbrief path work",
-      "short": "3a825fc",
-      "date": "2026-11-14T12:05:52Z",
-      "url": "https://github.com/hexinzxq/diffbrief/commit/3a825fcf46db441a56f37b29b183706bde69ff82"
-    },
-    {
       "repo": "dsh-agentledger",
       "message": "week: switch to diffbrief (alibaba/open-code-review angle) + research archive",
       "short": "2529678",
       "date": "2026-11-14T12:04:53Z",
       "url": "https://github.com/hexinzxq/dsh-agentledger/commit/2529678930054812c202766e85c9000ce1e049be"
-    },
-    {
-      "repo": "diffbrief",
-      "message": "scaffold: read your unpushed diff before someone else does",
-      "short": "f86f427",
-      "date": "2026-11-14T12:03:43Z",
-      "url": "https://github.com/hexinzxq/diffbrief/commit/f86f42754336f7c01eccd67747b9ed3acca64497"
     },
     {
       "repo": "worktree-board",
@@ -265,27 +286,6 @@
       "short": "4294925",
       "date": "2026-11-13T00:02:04Z",
       "url": "https://github.com/hexinzxq/worktree-board/commit/42949252ae43430d6f1d02035584537960a81c01"
-    },
-    {
-      "repo": "worktree-board",
-      "message": "fix(find): `find -C .` from inside a worktree must see itself",
-      "short": "87774ee",
-      "date": "2026-11-12T13:32:23Z",
-      "url": "https://github.com/hexinzxq/worktree-board/commit/87774ee964c310c6753b56587bc613412e04dabd"
-    },
-    {
-      "repo": "worktree-board",
-      "message": "fix(sort): --sort age compares instants, not the ISO strings",
-      "short": "c4487b1",
-      "date": "2026-11-12T13:31:09Z",
-      "url": "https://github.com/hexinzxq/worktree-board/commit/c4487b1b2a245e83d4b72c25cb0eebb33f91e768"
-    },
-    {
-      "repo": "worktree-board",
-      "message": "fix: a path that does not exist is an error, not a traceback",
-      "short": "cf61894",
-      "date": "2026-11-12T12:01:00Z",
-      "url": "https://github.com/hexinzxq/worktree-board/commit/cf6189484419e274ca67bb197c262fbaa7717576"
     }
   ]
 }
