@@ -1,12 +1,61 @@
 {
-  "generated_at": "2026-11-20T19:18:55Z",
+  "generated_at": "2026-11-21T18:20:32Z",
   "window_days": 14,
   "owner": "hexinzxq",
   "totals": {
     "commits": 40,
-    "repos": 3
+    "repos": 4
   },
   "entries": [
+    {
+      "repo": "tracesum",
+      "message": "fix: a long task says where it starts, not just how long",
+      "short": "44156d2",
+      "date": "2026-11-21T13:30:18Z",
+      "url": "https://github.com/hexinzxq/tracesum/commit/44156d24645ab31dc760d6622b550dbaf7832efc"
+    },
+    {
+      "repo": "dsh-agentledger",
+      "message": "week: switch to tracesum (chrome-devtools-mcp angle) + research archive",
+      "short": "7b065e7",
+      "date": "2026-11-21T12:03:23Z",
+      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/7b065e7acd6e7a1064d2c94e89f1b7897629e74f"
+    },
+    {
+      "repo": "tracesum",
+      "message": "scaffold: read a Chrome trace without DevTools",
+      "short": "42e6d80",
+      "date": "2026-11-21T12:02:18Z",
+      "url": "https://github.com/hexinzxq/tracesum/commit/42e6d802c05250817e92cf75d163b47527dbf6e2"
+    },
+    {
+      "repo": "diffbrief",
+      "message": "fix: a --path typo gets a sentence, not git's ambiguous argument",
+      "short": "f9f2731",
+      "date": "2026-11-21T10:33:24Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/f9f273137e3d52e7f36ab4e259c21ace0c0b5c33"
+    },
+    {
+      "repo": "diffbrief",
+      "message": "feat: db_password and auth_token are secret names too",
+      "short": "3151d58",
+      "date": "2026-11-21T10:31:52Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/3151d58eefc6b3336c88f64fb04e7cef570bca9d"
+    },
+    {
+      "repo": "diffbrief",
+      "message": "docs: the large-deletion row says whole files are exempt",
+      "short": "ef8a28f",
+      "date": "2026-11-21T00:01:48Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/ef8a28fd52bbfa9e301cb1606ea3e9ac306a8dc3"
+    },
+    {
+      "repo": "diffbrief",
+      "message": "fix: whole-file removal is not a large deletion",
+      "short": "a26d3ea",
+      "date": "2026-11-21T00:00:49Z",
+      "url": "https://github.com/hexinzxq/diffbrief/commit/a26d3ea1be6b65c121c83555c462b7e04b5312dc"
+    },
     {
       "repo": "diffbrief",
       "message": "fix: read findings top to bottom per file",
@@ -190,34 +239,6 @@
       "url": "https://github.com/hexinzxq/diffbrief/commit/cf8162ef1cd9a8bf42da1c678c94f723fc000f0e"
     },
     {
-      "repo": "diffbrief",
-      "message": "fix: a rename moves no line, so it asks for no test",
-      "short": "975a67a",
-      "date": "2026-11-16T00:01:18Z",
-      "url": "https://github.com/hexinzxq/diffbrief/commit/975a67a3bb86c368a296d6c2a5543e339fd913b8"
-    },
-    {
-      "repo": "diffbrief",
-      "message": "fix: debug output only counts in a file that can run",
-      "short": "7e6e133",
-      "date": "2026-11-15T13:30:30Z",
-      "url": "https://github.com/hexinzxq/diffbrief/commit/7e6e133180fcea2959446de50fe3fbb92d17e8f2"
-    },
-    {
-      "repo": "diffbrief",
-      "message": "feat: --install-hook, and read origin/<branch> when there is no upstream",
-      "short": "6241f8a",
-      "date": "2026-11-15T10:31:58Z",
-      "url": "https://github.com/hexinzxq/diffbrief/commit/6241f8a03b654a7cf274fa709ba5de3cde9d9908"
-    },
-    {
-      "repo": "diffbrief",
-      "message": "fix: a TODO in data is not a TODO entering the tree",
-      "short": "57f0259",
-      "date": "2026-11-15T05:30:31Z",
-      "url": "https://github.com/hexinzxq/diffbrief/commit/57f0259185acfdab18680efa972187b9d17a293d"
-    },
-    {
       "repo": "dsh-agentledger",
       "message": "week: switch to diffbrief (alibaba/open-code-review angle) + research archive",
       "short": "2529678",
@@ -265,27 +286,6 @@
       "short": "10557f0",
       "date": "2026-11-13T10:31:43Z",
       "url": "https://github.com/hexinzxq/worktree-board/commit/10557f0bfae4821be9c7bd29b3bd32ea1567f0ff"
-    },
-    {
-      "repo": "worktree-board",
-      "message": "feat(page): say how long ago, not which date",
-      "short": "c9a63c6",
-      "date": "2026-11-13T05:31:30Z",
-      "url": "https://github.com/hexinzxq/worktree-board/commit/c9a63c6f621e4625ac8634f025f54236da08c07f"
-    },
-    {
-      "repo": "worktree-board",
-      "message": "perf(server): one scan per ttl, shared by every polling tab",
-      "short": "7e1da09",
-      "date": "2026-11-13T04:30:42Z",
-      "url": "https://github.com/hexinzxq/worktree-board/commit/7e1da090713c575f81cf02c61e8a6b82d849795a"
-    },
-    {
-      "repo": "worktree-board",
-      "message": "fix(scan): a hung git call is a sentence, not a silent wait",
-      "short": "4294925",
-      "date": "2026-11-13T00:02:04Z",
-      "url": "https://github.com/hexinzxq/worktree-board/commit/42949252ae43430d6f1d02035584537960a81c01"
     }
   ]
 }
