@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T18:20:32Z",
+  "generated_at": "2026-11-22T18:44:17Z",
   "window_days": 14,
   "owner": "hexinzxq",
   "totals": {
@@ -7,6 +7,41 @@
     "repos": 4
   },
   "entries": [
+    {
+      "repo": "tracesum",
+      "message": "fix: busy time is the union of a thread's intervals",
+      "short": "07de918",
+      "date": "2026-11-22T13:30:20Z",
+      "url": "https://github.com/hexinzxq/tracesum/commit/07de918a472993a694abf4821d1af8256a974196"
+    },
+    {
+      "repo": "tracesum",
+      "message": "fix: the long-task list says how many there are in total",
+      "short": "9226ac0",
+      "date": "2026-11-22T10:31:08Z",
+      "url": "https://github.com/hexinzxq/tracesum/commit/9226ac0f054b96f6a3ce593dd25cc8efc1d3dbf9"
+    },
+    {
+      "repo": "tracesum",
+      "message": "fix: buckets are the main thread's, and style is not also layout",
+      "short": "7970221",
+      "date": "2026-11-22T05:30:25Z",
+      "url": "https://github.com/hexinzxq/tracesum/commit/79702218cb4af5233e31feb5821f9652d42e62b9"
+    },
+    {
+      "repo": "tracesum",
+      "message": "fix: nested events are not added twice to busy time",
+      "short": "1c1662f",
+      "date": "2026-11-22T04:30:22Z",
+      "url": "https://github.com/hexinzxq/tracesum/commit/1c1662f08ec6155fa300e9397b2d8a67565afaa1"
+    },
+    {
+      "repo": "tracesum",
+      "message": "feat: the main thread is the one the trace names",
+      "short": "63a44a9",
+      "date": "2026-11-22T00:00:23Z",
+      "url": "https://github.com/hexinzxq/tracesum/commit/63a44a9907fa365a165b8961d0badca3933e1d56"
+    },
     {
       "repo": "tracesum",
       "message": "fix: a long task says where it starts, not just how long",
@@ -251,41 +286,6 @@
       "short": "38889f0",
       "date": "2026-11-14T10:34:09Z",
       "url": "https://github.com/hexinzxq/worktree-board/commit/38889f0d083c45504a24e8dad4b8751ae22df16c"
-    },
-    {
-      "repo": "worktree-board",
-      "message": "feat(scan): keep the reason a worktree was locked, not just the flag",
-      "short": "fa6920a",
-      "date": "2026-11-14T05:31:53Z",
-      "url": "https://github.com/hexinzxq/worktree-board/commit/fa6920aee296046b99d5f13df05a59263d438b5d"
-    },
-    {
-      "repo": "worktree-board",
-      "message": "fix(cli): flush the serve banner so a piped stdout still shows the URL",
-      "short": "014ac98",
-      "date": "2026-11-14T04:31:41Z",
-      "url": "https://github.com/hexinzxq/worktree-board/commit/014ac982b4b567ae01f0996d4648fbce70a408a0"
-    },
-    {
-      "repo": "worktree-board",
-      "message": "fix(cli): `*` marks the worktree you are in, not the main one",
-      "short": "ce8d156",
-      "date": "2026-11-14T00:01:41Z",
-      "url": "https://github.com/hexinzxq/worktree-board/commit/ce8d156f6fb75663be26207bfa6d188fed58714e"
-    },
-    {
-      "repo": "worktree-board",
-      "message": "fix(find): name the repositories git refused, don't drop them",
-      "short": "26d1e82",
-      "date": "2026-11-13T13:31:45Z",
-      "url": "https://github.com/hexinzxq/worktree-board/commit/26d1e82b15eb654bef19c1d4364de0d029e4ffad"
-    },
-    {
-      "repo": "worktree-board",
-      "message": "fix(scan): read worktree list as NUL records, and keep one row one line",
-      "short": "10557f0",
-      "date": "2026-11-13T10:31:43Z",
-      "url": "https://github.com/hexinzxq/worktree-board/commit/10557f0bfae4821be9c7bd29b3bd32ea1567f0ff"
     }
   ]
 }
