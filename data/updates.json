@@ -1,12 +1,54 @@
 {
-  "generated_at": "2026-11-22T18:44:17Z",
+  "generated_at": "2026-11-23T22:57:54Z",
   "window_days": 14,
   "owner": "hexinzxq",
   "totals": {
     "commits": 40,
-    "repos": 4
+    "repos": 3
   },
   "entries": [
+    {
+      "repo": "tracesum",
+      "message": "docs: --long-ms in the quickstart and the exit code",
+      "short": "b1a9156",
+      "date": "2026-11-23T13:31:20Z",
+      "url": "https://github.com/hexinzxq/tracesum/commit/b1a9156e91cfde0de5424cbe8b890e2d8aa216a7"
+    },
+    {
+      "repo": "tracesum",
+      "message": "feat: --long-ms, and print the threshold it actually used",
+      "short": "467eb21",
+      "date": "2026-11-23T13:30:38Z",
+      "url": "https://github.com/hexinzxq/tracesum/commit/467eb212741d07db311b0a45911274a9c192587b"
+    },
+    {
+      "repo": "tracesum",
+      "message": "feat(page): show the total, the truncation and the thread name",
+      "short": "1f70350",
+      "date": "2026-11-23T10:30:33Z",
+      "url": "https://github.com/hexinzxq/tracesum/commit/1f703503e39a457c62b282fabf23d2682e9471fa"
+    },
+    {
+      "repo": "tracesum",
+      "message": "fix: the exit code only answers for the main thread",
+      "short": "a0c3fdc",
+      "date": "2026-11-23T05:30:31Z",
+      "url": "https://github.com/hexinzxq/tracesum/commit/a0c3fdcc0e2d8cb48df45047da547e7a58bac3d1"
+    },
+    {
+      "repo": "tracesum",
+      "message": "fix: the page says when the trace was read",
+      "short": "15a0186",
+      "date": "2026-11-23T04:30:43Z",
+      "url": "https://github.com/hexinzxq/tracesum/commit/15a01864e75e46c16457f28ca4ce72a2396a3a96"
+    },
+    {
+      "repo": "tracesum",
+      "message": "fix: a long task's time is relative to the trace, like the DevTools timeline",
+      "short": "75586d6",
+      "date": "2026-11-23T00:00:50Z",
+      "url": "https://github.com/hexinzxq/tracesum/commit/75586d6900b1d02fffd533628a2c1c4482d9291d"
+    },
     {
       "repo": "tracesum",
       "message": "fix: busy time is the union of a thread's intervals",
@@ -244,48 +286,6 @@
       "short": "26a322d",
       "date": "2026-11-17T00:00:26Z",
       "url": "https://github.com/hexinzxq/diffbrief/commit/26a322d1caa7f55211632ee049bec99f686d1d59"
-    },
-    {
-      "repo": "diffbrief",
-      "message": "fix: a template value is not a leaked key",
-      "short": "14d231c",
-      "date": "2026-11-16T13:30:51Z",
-      "url": "https://github.com/hexinzxq/diffbrief/commit/14d231cdbcb598172bc56233870cb4d959fbd6d6"
-    },
-    {
-      "repo": "diffbrief",
-      "message": "fix: a branch that was never pushed reads against origin/HEAD",
-      "short": "59a1c66",
-      "date": "2026-11-16T10:30:51Z",
-      "url": "https://github.com/hexinzxq/diffbrief/commit/59a1c669218bcdd20252dd9b6c392dc70b971e37"
-    },
-    {
-      "repo": "diffbrief",
-      "message": "fix: rewrite a stale hook of our own instead of saying it is there",
-      "short": "b8afea3",
-      "date": "2026-11-16T05:31:05Z",
-      "url": "https://github.com/hexinzxq/diffbrief/commit/b8afea369e8d57033c9ed55480dca0bdc181c98f"
-    },
-    {
-      "repo": "diffbrief",
-      "message": "fix: a hook checks the commits, not the untouched working copy",
-      "short": "cf8162e",
-      "date": "2026-11-16T04:31:14Z",
-      "url": "https://github.com/hexinzxq/diffbrief/commit/cf8162ef1cd9a8bf42da1c678c94f723fc000f0e"
-    },
-    {
-      "repo": "dsh-agentledger",
-      "message": "week: switch to diffbrief (alibaba/open-code-review angle) + research archive",
-      "short": "2529678",
-      "date": "2026-11-14T12:04:53Z",
-      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/2529678930054812c202766e85c9000ce1e049be"
-    },
-    {
-      "repo": "worktree-board",
-      "message": "fix(cli): refuse a non-repository before serve prints a URL",
-      "short": "38889f0",
-      "date": "2026-11-14T10:34:09Z",
-      "url": "https://github.com/hexinzxq/worktree-board/commit/38889f0d083c45504a24e8dad4b8751ae22df16c"
     }
   ]
 }
