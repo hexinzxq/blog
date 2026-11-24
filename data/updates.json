@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T22:57:54Z",
+  "generated_at": "2026-11-24T21:37:19Z",
   "window_days": 14,
   "owner": "hexinzxq",
   "totals": {
@@ -7,6 +7,41 @@
     "repos": 3
   },
   "entries": [
+    {
+      "repo": "tracesum",
+      "message": "fix: an out-of-range port is a sentence, not a traceback",
+      "short": "09c6b83",
+      "date": "2026-11-24T13:30:24Z",
+      "url": "https://github.com/hexinzxq/tracesum/commit/09c6b8301af806981767fd2111caf12a15068b88"
+    },
+    {
+      "repo": "tracesum",
+      "message": "fix: name an unnamed thread by its tid, and show its task count",
+      "short": "1761204",
+      "date": "2026-11-24T10:30:39Z",
+      "url": "https://github.com/hexinzxq/tracesum/commit/1761204d42524a29ab51816e07f1b543c19038a5"
+    },
+    {
+      "repo": "tracesum",
+      "message": "fix: a truncated thread list says how many there are",
+      "short": "d4da524",
+      "date": "2026-11-24T05:30:32Z",
+      "url": "https://github.com/hexinzxq/tracesum/commit/d4da524959ca773c3dd85b13abaf918378d3d5b7"
+    },
+    {
+      "repo": "tracesum",
+      "message": "feat: print the other threads, not just the main one",
+      "short": "75dda3e",
+      "date": "2026-11-24T04:30:23Z",
+      "url": "https://github.com/hexinzxq/tracesum/commit/75dda3e9eb19be471de9d500ce0a2b8e0939778e"
+    },
+    {
+      "repo": "tracesum",
+      "message": "fix: say when the main thread is a guess",
+      "short": "be726f3",
+      "date": "2026-11-24T00:00:29Z",
+      "url": "https://github.com/hexinzxq/tracesum/commit/be726f304616fd72b0fc7b6086a72cddce19edbb"
+    },
     {
       "repo": "tracesum",
       "message": "docs: --long-ms in the quickstart and the exit code",
@@ -251,41 +286,6 @@
       "short": "0966396",
       "date": "2026-11-18T00:00:42Z",
       "url": "https://github.com/hexinzxq/diffbrief/commit/0966396c673addf8bbb545fb2d9ce25c2ad09385"
-    },
-    {
-      "repo": "diffbrief",
-      "message": "fix: --staged and --committed cannot be asked for at once",
-      "short": "accf822",
-      "date": "2026-11-17T13:30:21Z",
-      "url": "https://github.com/hexinzxq/diffbrief/commit/accf822f8bf1846af43e2ae6d7f881878be439a9"
-    },
-    {
-      "repo": "diffbrief",
-      "message": "feat: the page says how many files --exclude skipped",
-      "short": "90952c4",
-      "date": "2026-11-17T10:30:32Z",
-      "url": "https://github.com/hexinzxq/diffbrief/commit/90952c452322fe72fb46606c3bb16ef76f29b605"
-    },
-    {
-      "repo": "diffbrief",
-      "message": "fix: tests-missing says when --exclude hid the tests",
-      "short": "1eea6f8",
-      "date": "2026-11-17T05:30:44Z",
-      "url": "https://github.com/hexinzxq/diffbrief/commit/1eea6f8fac57b542c4563a8f23abeb6c42686496"
-    },
-    {
-      "repo": "diffbrief",
-      "message": "fix: serve passes --exclude and --committed through to the page",
-      "short": "e359e2b",
-      "date": "2026-11-17T04:30:38Z",
-      "url": "https://github.com/hexinzxq/diffbrief/commit/e359e2beaf80aff9a449ce35fa528d86c4a3b632"
-    },
-    {
-      "repo": "diffbrief",
-      "message": "fix: print a non-ASCII path the way it is on disk",
-      "short": "26a322d",
-      "date": "2026-11-17T00:00:26Z",
-      "url": "https://github.com/hexinzxq/diffbrief/commit/26a322d1caa7f55211632ee049bec99f686d1d59"
     }
   ]
 }
