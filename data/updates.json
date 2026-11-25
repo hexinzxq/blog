@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T21:37:19Z",
+  "generated_at": "2026-11-25T20:44:34Z",
   "window_days": 14,
   "owner": "hexinzxq",
   "totals": {
@@ -7,6 +7,41 @@
     "repos": 3
   },
   "entries": [
+    {
+      "repo": "tracesum",
+      "message": "fix: a --kind name another bucket already owns says so",
+      "short": "bb9f4da",
+      "date": "2026-11-25T13:30:15Z",
+      "url": "https://github.com/hexinzxq/tracesum/commit/bb9f4daf82a3959326f65d2980949f0961d32690"
+    },
+    {
+      "repo": "tracesum",
+      "message": "fix: a nested long task is part of the same hitch",
+      "short": "20ffe5d",
+      "date": "2026-11-25T10:30:52Z",
+      "url": "https://github.com/hexinzxq/tracesum/commit/20ffe5d8c1256009aa85a17ba4ea77b13f9dd016"
+    },
+    {
+      "repo": "tracesum",
+      "message": "feat: --kind puts your own event names in a bucket",
+      "short": "08734ef",
+      "date": "2026-11-25T05:31:05Z",
+      "url": "https://github.com/hexinzxq/tracesum/commit/08734eff8daebdc3c2eb54d1294f35e8d0daef2e"
+    },
+    {
+      "repo": "tracesum",
+      "message": "fix: say when the bucket totals overlap each other",
+      "short": "6bf3e8f",
+      "date": "2026-11-25T04:30:29Z",
+      "url": "https://github.com/hexinzxq/tracesum/commit/6bf3e8f7c434a89942df151c475ca6df9cdb9221"
+    },
+    {
+      "repo": "tracesum",
+      "message": "feat: the buckets say where the rest of the main thread went",
+      "short": "17cdeee",
+      "date": "2026-11-25T00:01:14Z",
+      "url": "https://github.com/hexinzxq/tracesum/commit/17cdeeecad467a1dbf41aebb8b17d4ca7934927f"
+    },
     {
       "repo": "tracesum",
       "message": "fix: an out-of-range port is a sentence, not a traceback",
@@ -251,41 +286,6 @@
       "short": "034e3fb",
       "date": "2026-11-19T00:02:03Z",
       "url": "https://github.com/hexinzxq/diffbrief/commit/034e3fb7d07a8d9ada3813ba009542c85b37c59c"
-    },
-    {
-      "repo": "diffbrief",
-      "message": "fix: a first push is read against the empty tree, not HEAD",
-      "short": "a7fb0e0",
-      "date": "2026-11-18T13:32:31Z",
-      "url": "https://github.com/hexinzxq/diffbrief/commit/a7fb0e05366d829d02c87868fc451a179df6d46b"
-    },
-    {
-      "repo": "diffbrief",
-      "message": "feat: bake --exclude into the installed hook",
-      "short": "b82c6b1",
-      "date": "2026-11-18T10:31:04Z",
-      "url": "https://github.com/hexinzxq/diffbrief/commit/b82c6b1a7e107fe27786b5b706999763c25387a6"
-    },
-    {
-      "repo": "diffbrief",
-      "message": "feat: catch a bare secret in a yaml/ini/properties file",
-      "short": "6f0f83c",
-      "date": "2026-11-18T05:30:56Z",
-      "url": "https://github.com/hexinzxq/diffbrief/commit/6f0f83c7fcbdb1e1ed6617a69ce346773942b2cf"
-    },
-    {
-      "repo": "diffbrief",
-      "message": "fix: app/tests.py is the test file, not a source file",
-      "short": "57c4419",
-      "date": "2026-11-18T04:30:29Z",
-      "url": "https://github.com/hexinzxq/diffbrief/commit/57c4419aee4e2fffb921bfcb587b8dc7c1c92406"
-    },
-    {
-      "repo": "diffbrief",
-      "message": "fix: a template config is not asked for a test",
-      "short": "0966396",
-      "date": "2026-11-18T00:00:42Z",
-      "url": "https://github.com/hexinzxq/diffbrief/commit/0966396c673addf8bbb545fb2d9ce25c2ad09385"
     }
   ]
 }
