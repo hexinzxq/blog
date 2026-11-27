@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T20:37:10Z",
+  "generated_at": "2026-11-27T20:23:11Z",
   "window_days": 14,
   "owner": "hexinzxq",
   "totals": {
@@ -7,6 +7,41 @@
     "repos": 3
   },
   "entries": [
+    {
+      "repo": "tracesum",
+      "message": "fix: an unusable tid is a sentence, not a TypeError",
+      "short": "9308923",
+      "date": "2026-11-27T13:30:25Z",
+      "url": "https://github.com/hexinzxq/tracesum/commit/930892381357cd7865e241ebfdb1f7fc1f58e74b"
+    },
+    {
+      "repo": "tracesum",
+      "message": "fix: a --kind name that matched nothing says so",
+      "short": "e63c52e",
+      "date": "2026-11-27T10:30:58Z",
+      "url": "https://github.com/hexinzxq/tracesum/commit/e63c52e79922d30a62cf2ca50f1c63ba1a630c98"
+    },
+    {
+      "repo": "tracesum",
+      "message": "fix: the page states the real criterion and who it drives",
+      "short": "2ca6909",
+      "date": "2026-11-27T05:30:55Z",
+      "url": "https://github.com/hexinzxq/tracesum/commit/2ca6909120118a0cb5296bd233e591302c5b7262"
+    },
+    {
+      "repo": "tracesum",
+      "message": "fix: --json and --serve are different outputs, do not pick one silently",
+      "short": "8d55ea4",
+      "date": "2026-11-27T04:30:44Z",
+      "url": "https://github.com/hexinzxq/tracesum/commit/8d55ea4d1d29fb4ae8cf2dad47e1ec5d89b97aa4"
+    },
+    {
+      "repo": "tracesum",
+      "message": "fix: read a trace that starts with a byte-order mark",
+      "short": "b213619",
+      "date": "2026-11-27T00:00:18Z",
+      "url": "https://github.com/hexinzxq/tracesum/commit/b213619192331d930446b59b5efbe4d658a2aa1a"
+    },
     {
       "repo": "tracesum",
       "message": "fix: a crowded neighbourhood says how many events there were",
@@ -183,32 +218,11 @@
       "url": "https://github.com/hexinzxq/tracesum/commit/1c1662f08ec6155fa300e9397b2d8a67565afaa1"
     },
     {
-      "repo": "tracesum",
-      "message": "feat: the main thread is the one the trace names",
-      "short": "63a44a9",
-      "date": "2026-11-22T00:00:23Z",
-      "url": "https://github.com/hexinzxq/tracesum/commit/63a44a9907fa365a165b8961d0badca3933e1d56"
-    },
-    {
-      "repo": "tracesum",
-      "message": "fix: a long task says where it starts, not just how long",
-      "short": "44156d2",
-      "date": "2026-11-21T13:30:18Z",
-      "url": "https://github.com/hexinzxq/tracesum/commit/44156d24645ab31dc760d6622b550dbaf7832efc"
-    },
-    {
       "repo": "dsh-agentledger",
       "message": "week: switch to tracesum (chrome-devtools-mcp angle) + research archive",
       "short": "7b065e7",
       "date": "2026-11-21T12:03:23Z",
       "url": "https://github.com/hexinzxq/dsh-agentledger/commit/7b065e7acd6e7a1064d2c94e89f1b7897629e74f"
-    },
-    {
-      "repo": "tracesum",
-      "message": "scaffold: read a Chrome trace without DevTools",
-      "short": "42e6d80",
-      "date": "2026-11-21T12:02:18Z",
-      "url": "https://github.com/hexinzxq/tracesum/commit/42e6d802c05250817e92cf75d163b47527dbf6e2"
     },
     {
       "repo": "diffbrief",
@@ -272,20 +286,6 @@
       "short": "9e6e99d",
       "date": "2026-11-20T04:30:50Z",
       "url": "https://github.com/hexinzxq/diffbrief/commit/9e6e99ddc3c5cab90367fac35207f74f8b4e1bf3"
-    },
-    {
-      "repo": "diffbrief",
-      "message": "feat(page): show binaries not read and the --path scope",
-      "short": "c240af5",
-      "date": "2026-11-20T04:30:36Z",
-      "url": "https://github.com/hexinzxq/diffbrief/commit/c240af5985524a7084a18e28804492c1c53f3870"
-    },
-    {
-      "repo": "diffbrief",
-      "message": "fix: name the binary files the tool could not read",
-      "short": "1060c01",
-      "date": "2026-11-20T00:01:34Z",
-      "url": "https://github.com/hexinzxq/diffbrief/commit/1060c01478746438273fb8d57046c5345583fa78"
     }
   ]
 }
