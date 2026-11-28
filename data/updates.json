@@ -1,12 +1,68 @@
 {
-  "generated_at": "2026-11-27T20:23:11Z",
+  "generated_at": "2026-11-28T19:12:32Z",
   "window_days": 14,
   "owner": "hexinzxq",
   "totals": {
     "commits": 40,
-    "repos": 3
+    "repos": 4
   },
   "entries": [
+    {
+      "repo": "planbrief",
+      "message": "fix: an indented line continues its list item",
+      "short": "d184266",
+      "date": "2026-11-28T13:30:17Z",
+      "url": "https://github.com/hexinzxq/planbrief/commit/d184266ef0f850660f94198555531ab34010137a"
+    },
+    {
+      "repo": "dsh-agentledger",
+      "message": "docs: name the scaffold commit correctly",
+      "short": "684d0ba",
+      "date": "2026-11-28T12:04:29Z",
+      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/684d0baf1e9fde37755cd6b4dd737f72176c4bfb"
+    },
+    {
+      "repo": "dsh-agentledger",
+      "message": "week: switch to planbrief (plannotator angle), research report 2026-11-28",
+      "short": "4c1172f",
+      "date": "2026-11-28T12:04:15Z",
+      "url": "https://github.com/hexinzxq/dsh-agentledger/commit/4c1172f5dd9323915b6aeaa209155cfdb5056001"
+    },
+    {
+      "repo": "planbrief",
+      "message": "scaffold: read a plan, leave notes, hand back a brief",
+      "short": "c1ab438",
+      "date": "2026-11-28T12:03:14Z",
+      "url": "https://github.com/hexinzxq/planbrief/commit/c1ab43813f6642888f28c772baefd91c261fbf09"
+    },
+    {
+      "repo": "tracesum",
+      "message": "docs: the README says how main is chosen, and stops listing shipped work",
+      "short": "ae348ee",
+      "date": "2026-11-28T10:30:34Z",
+      "url": "https://github.com/hexinzxq/tracesum/commit/ae348ee620a067c11338900e3d752b1477d0056a"
+    },
+    {
+      "repo": "tracesum",
+      "message": "fix: a wildcard host prints a URL a browser can open",
+      "short": "dabcb46",
+      "date": "2026-11-28T05:30:40Z",
+      "url": "https://github.com/hexinzxq/tracesum/commit/dabcb461ecaea7f7db03ff24a97c43793d8071c7"
+    },
+    {
+      "repo": "tracesum",
+      "message": "fix: say when the trace has more than one renderer main",
+      "short": "8443d76",
+      "date": "2026-11-28T04:30:28Z",
+      "url": "https://github.com/hexinzxq/tracesum/commit/8443d76a424762271f5c1798834e652dccb4c8f4"
+    },
+    {
+      "repo": "tracesum",
+      "message": "fix: tids are unique per process, not per trace",
+      "short": "3a4bb9b",
+      "date": "2026-11-28T00:01:28Z",
+      "url": "https://github.com/hexinzxq/tracesum/commit/3a4bb9b5d9cf1f730165d4d7ab11972f185fafcb"
+    },
     {
       "repo": "tracesum",
       "message": "fix: an unusable tid is a sentence, not a TypeError",
@@ -190,34 +246,6 @@
       "url": "https://github.com/hexinzxq/tracesum/commit/75586d6900b1d02fffd533628a2c1c4482d9291d"
     },
     {
-      "repo": "tracesum",
-      "message": "fix: busy time is the union of a thread's intervals",
-      "short": "07de918",
-      "date": "2026-11-22T13:30:20Z",
-      "url": "https://github.com/hexinzxq/tracesum/commit/07de918a472993a694abf4821d1af8256a974196"
-    },
-    {
-      "repo": "tracesum",
-      "message": "fix: the long-task list says how many there are in total",
-      "short": "9226ac0",
-      "date": "2026-11-22T10:31:08Z",
-      "url": "https://github.com/hexinzxq/tracesum/commit/9226ac0f054b96f6a3ce593dd25cc8efc1d3dbf9"
-    },
-    {
-      "repo": "tracesum",
-      "message": "fix: buckets are the main thread's, and style is not also layout",
-      "short": "7970221",
-      "date": "2026-11-22T05:30:25Z",
-      "url": "https://github.com/hexinzxq/tracesum/commit/79702218cb4af5233e31feb5821f9652d42e62b9"
-    },
-    {
-      "repo": "tracesum",
-      "message": "fix: nested events are not added twice to busy time",
-      "short": "1c1662f",
-      "date": "2026-11-22T04:30:22Z",
-      "url": "https://github.com/hexinzxq/tracesum/commit/1c1662f08ec6155fa300e9397b2d8a67565afaa1"
-    },
-    {
       "repo": "dsh-agentledger",
       "message": "week: switch to tracesum (chrome-devtools-mcp angle) + research archive",
       "short": "7b065e7",
@@ -258,34 +286,6 @@
       "short": "6d85eb4",
       "date": "2026-11-20T13:30:54Z",
       "url": "https://github.com/hexinzxq/diffbrief/commit/6d85eb4489136169c40156142084fedaa4716e72"
-    },
-    {
-      "repo": "diffbrief",
-      "message": "fix: name an --exclude glob that matched nothing",
-      "short": "63eb304",
-      "date": "2026-11-20T10:32:22Z",
-      "url": "https://github.com/hexinzxq/diffbrief/commit/63eb30443d9e6251bf8369cff4e07a2af1944efd"
-    },
-    {
-      "repo": "diffbrief",
-      "message": "docs: split the --path line and say what the hook bakes in",
-      "short": "05369e4",
-      "date": "2026-11-20T05:31:18Z",
-      "url": "https://github.com/hexinzxq/diffbrief/commit/05369e49c8b393fd4e4c1297164ca75a271c3768"
-    },
-    {
-      "repo": "diffbrief",
-      "message": "feat: bake --path into the installed hook too",
-      "short": "398f2d4",
-      "date": "2026-11-20T05:30:41Z",
-      "url": "https://github.com/hexinzxq/diffbrief/commit/398f2d4f0c62b5c81cd82ac80d4fe998c02b0aa6"
-    },
-    {
-      "repo": "diffbrief",
-      "message": "docs: say the page polls every 5s again",
-      "short": "9e6e99d",
-      "date": "2026-11-20T04:30:50Z",
-      "url": "https://github.com/hexinzxq/diffbrief/commit/9e6e99ddc3c5cab90367fac35207f74f8b4e1bf3"
     }
   ]
 }
